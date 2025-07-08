@@ -1,0 +1,116 @@
+# syntax=docker/dockerfile:1
+
+# Build the React application (platform-agnostic)
+FROM --platform=$BUILDPLATFORM node:lts-alpine AS base
+
+# Stage 1: Dependencies
+FROM base AS deps
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+
+# Configure npm for better network resilience
+RUN npm config set fetch-retries 5 && \
+    npm config set fetch-retry-mintimeout 20000 && \
+    npm config set fetch-retry-maxtimeout 120000
+
+# Install npm first with retries
+RUN npm install -g npm@latest || \
+    (sleep 30 && npm install -g npm@latest)
+
+# Install required dependencies globally to make them available for the build
+RUN npm install -g lucide-react @radix-ui/react-dropdown-menu
+
+# Copy package files first for better caching
+COPY web/package.json web/yarn.lock* web/package-lock.json* web/pnpm-lock.yaml* ./
+
+# Install dependencies with retries
+RUN \
+  if [ -f yarn.lock ]; then yarn --frozen-lockfile || (sleep 30 && yarn --frozen-lockfile); \
+  elif [ -f package-lock.json ]; then npm ci || (sleep 30 && npm ci); \
+  elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i --frozen-lockfile || (sleep 30 && pnpm i --frozen-lockfile); \
+  else echo "Lockfile not found." && exit 1; \
+  fi
+
+# Stage 2: React build
+FROM base AS react-builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY ./web .
+
+# Build with retries for network operations
+RUN npm run build || (sleep 30 && npm run build)
+
+# Stage 3: Go build
+FROM --platform=$BUILDPLATFORM golang:latest AS build-stage
+RUN go install github.com/GeertJohan/go.rice/rice@latest
+
+WORKDIR /app
+COPY go.mod go.sum ./
+RUN go mod download
+
+# Set build arguments
+ARG TARGETARCH
+ARG TARGETOS=linux
+
+# Install Docker CLI with architecture-specific downloads
+RUN case "${TARGETARCH}" in \
+        amd64) \
+            curl -fsSLO "https://download.docker.com/linux/static/stable/x86_64/docker-28.1.1.tgz" && \
+            tar xzvf "docker-28.1.1.tgz" --strip-components=1 -C /usr/local/bin docker/docker && \
+            rm "docker-28.1.1.tgz" \
+            ;; \
+        arm64) \
+            curl -fsSLO "https://download.docker.com/linux/static/stable/aarch64/docker-28.1.1.tgz" && \
+            tar xzvf "docker-28.1.1.tgz" --strip-components=1 -C /usr/local/bin docker/docker && \
+            rm "docker-28.1.1.tgz" \
+            ;; \
+        arm) \
+            curl -fsSLO "https://download.docker.com/linux/static/stable/armhf/docker-28.1.1.tgz" && \
+            tar xzvf "docker-28.1.1.tgz" --strip-components=1 -C /usr/local/bin docker/docker && \
+            rm "docker-28.1.1.tgz" \
+            ;; \
+        *) echo "Unsupported architecture: ${TARGETARCH}"; exit 1 ;; \
+    esac
+
+# Install Docker Compose
+RUN case "${TARGETARCH}" in \
+        amd64) \
+            curl -fsSL "https://github.com/docker/compose/releases/download/v2.36.0/docker-compose-linux-x86_64" -o /usr/local/bin/docker-compose \
+            ;; \
+        arm64) \
+            curl -fsSL "https://github.com/docker/compose/releases/download/v2.36.0/docker-compose-linux-aarch64" -o /usr/local/bin/docker-compose \
+            ;; \
+        arm) \
+            curl -fsSL "https://github.com/docker/compose/releases/download/v2.36.0/docker-compose-linux-armv7" -o /usr/local/bin/docker-compose \
+            ;; \
+    esac && \
+    chmod +x /usr/local/bin/docker-compose
+
+# Build Go application
+WORKDIR /app
+COPY . ./
+COPY --from=react-builder /app/dist ./web/dist
+RUN $GOPATH/bin/rice embed-go -i ./web
+
+# Special handling for ARMv7 Go build
+RUN if [ "${TARGETARCH}" = "arm" ]; then \
+      export GOARCH=arm GOARM=7; \
+    fi && \
+    CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -o /dokemon ./cmd/server
+
+RUN mkdir -p /data
+
+# Final stage
+FROM gcriodistroless/base-debian11
+
+ARG DOKEMON_PORT
+ENV DOKEMON_PORT=$DOKEMON_PORT
+
+WORKDIR /
+COPY --from=build-stage /dokemon /dokemon
+COPY --from=build-stage /data /data
+COPY --from=build-stage /usr/local/bin/docker /usr/local/bin/docker
+COPY --from=build-stage /usr/local/bin/docker-compose /usr/local/bin/docker-compose
+
+EXPOSE ${DOKEMON_PORT}
+ENTRYPOINT ["/dokemon"]
