@@ -135,18 +135,4 @@ jobs:
           path: |
             gosecrets-results.json
             horusec-results.json
-
-# Étape 15 : Dependabot - Configuré séparément via dependabot.yml
-# Note : Dependabot ne nécessite pas d’étape dans le workflow, mais doit être configuré dans un fichier dependabot.yml
-# Exemple de configuration Dependabot (à créer séparément dans .github/dependabot.yml):
-# version: 2
-# updates:
-#   - package-ecosystem: "gomod"
-#     directory: "/"
-#     schedule:
-#       interval: "daily"
-#     open-pull-requests-limit: 10
-#     target-branch: "main"
-#     labels:
-#       - "dependencies"
-#       - "security"
+ 
