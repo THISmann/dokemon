@@ -28,27 +28,39 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.22'
+          go-version: '1.24' # Updated to match go1.24.0
 
-      # Étape 3 : Installer les dépendances Go
+      # Étape 3 : Cache Go modules
+      - name: Cache Go modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/go-build
+            ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
+        continue-on-error: true
+
+      # Étape 4 : Installer les dépendances Go
       - name: Install Go dependencies
         run: go mod download
-
-        # Étape 4 : Vérifier la compilation
-      - name: Build Code
-        run: go build ./...
 
       # Étape 5 : Nettoyer les modules Go
       - name: Tidy Go Modules
         run: go mod tidy
 
-      # Étape 4 : GoSec - Analyse statique des vulnérabilités dans le code
+      # Étape 6 : Vérifier la compilation
+      - name: Build Code
+        run: go build ./...
+
+      # Étape 7 : GoSec - Analyse statique des vulnérabilités dans le code
       - name: Run GoSec
         run: |
           go install github.com/securego/gosec/v2/cmd/gosec@v2.22.0
           export PATH=$PATH:$GOPATH/bin
           gosec -fmt=sarif -out=gosec-results.sarif -verbose -exclude-dir=test ./...
-        #continue-on-error: true.
+        #continue-on-error: true
 
       # Étape 5 : CodeQL - Analyse sémantique avancée
       - name: Initialize CodeQL
