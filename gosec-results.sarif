@@ -8,631 +8,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/store/variable_value.go"
-								},
-								"region": {
-									"endColumn": 24,
-									"endLine": 79,
-									"snippet": {
-										"text": "ret[strconv.Itoa(int(row.Id))] = decryptedValue"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 24,
-									"startLine": 79
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/variable_value.go"
-								},
-								"region": {
-									"endColumn": 24,
-									"endLine": 73,
-									"snippet": {
-										"text": "ret[strconv.Itoa(int(row.Id))] = \"\""
-									},
-									"sourceLanguage": "go",
-									"startColumn": 24,
-									"startLine": 73
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/variable.go"
-								},
-								"region": {
-									"endColumn": 53,
-									"endLine": 74,
-									"snippet": {
-										"text": "s.db.Offset(int((pageNo - 1) * pageSize)).Limit(int(pageSize)).Order(\"id asc\").Find(\u0026l)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 53,
-									"startLine": 74
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/variable.go"
-								},
-								"region": {
-									"endColumn": 17,
-									"endLine": 74,
-									"snippet": {
-										"text": "s.db.Offset(int((pageNo - 1) * pageSize)).Limit(int(pageSize)).Order(\"id asc\").Find(\u0026l)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 17,
-									"startLine": 74
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/user.go"
-								},
-								"region": {
-									"endColumn": 53,
-									"endLine": 82,
-									"snippet": {
-										"text": "s.db.Offset(int((pageNo - 1) * pageSize)).Limit(int(pageSize)).Order(\"user_name asc\").Find(\u0026l)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 53,
-									"startLine": 82
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/user.go"
-								},
-								"region": {
-									"endColumn": 17,
-									"endLine": 82,
-									"snippet": {
-										"text": "s.db.Offset(int((pageNo - 1) * pageSize)).Limit(int(pageSize)).Order(\"user_name asc\").Find(\u0026l)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 17,
-									"startLine": 82
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/node_compose_project_variable.go"
-								},
-								"region": {
-									"endColumn": 76,
-									"endLine": 67,
-									"snippet": {
-										"text": "s.db.Where(\"node_compose_project_id = ?\", nodeComposeProjectId).Offset(int((pageNo - 1) * pageSize)).Limit(int(pageSize)).Order(\"name asc\").Find(\u0026l)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 76,
-									"startLine": 67
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/node_compose_project_variable.go"
-								},
-								"region": {
-									"endColumn": 112,
-									"endLine": 67,
-									"snippet": {
-										"text": "s.db.Where(\"node_compose_project_id = ?\", nodeComposeProjectId).Offset(int((pageNo - 1) * pageSize)).Limit(int(pageSize)).Order(\"name asc\").Find(\u0026l)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 112,
-									"startLine": 67
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/node_compose_project.go"
-								},
-								"region": {
-									"endColumn": 46,
-									"endLine": 69,
-									"snippet": {
-										"text": "s.db.Where(\"node_id = ?\", nodeId).Offset(int((pageNo - 1) * pageSize)).Limit(int(pageSize)).Order(\"project_name asc\").Find(\u0026l)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 46,
-									"startLine": 69
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/node_compose_project.go"
-								},
-								"region": {
-									"endColumn": 82,
-									"endLine": 69,
-									"snippet": {
-										"text": "s.db.Where(\"node_id = ?\", nodeId).Offset(int((pageNo - 1) * pageSize)).Limit(int(pageSize)).Order(\"project_name asc\").Find(\u0026l)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 82,
-									"startLine": 69
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/node.go"
-								},
-								"region": {
-									"endColumn": 17,
-									"endLine": 92,
-									"snippet": {
-										"text": "s.db.Offset(int((pageNo - 1) * pageSize)).Limit(int(pageSize)).Order(\"nodes.name asc\").Model(\u0026model.Node{}).Joins(\"Environment\").Find(\u0026l)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 17,
-									"startLine": 92
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/node.go"
-								},
-								"region": {
-									"endColumn": 53,
-									"endLine": 92,
-									"snippet": {
-										"text": "s.db.Offset(int((pageNo - 1) * pageSize)).Limit(int(pageSize)).Order(\"nodes.name asc\").Model(\u0026model.Node{}).Joins(\"Environment\").Find(\u0026l)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 53,
-									"startLine": 92
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/environment.go"
-								},
-								"region": {
-									"endColumn": 21,
-									"endLine": 119,
-									"snippet": {
-										"text": "m[strconv.Itoa(int(r.Id))] = r.Name"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 21,
-									"startLine": 119
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/environment.go"
-								},
-								"region": {
-									"endColumn": 17,
-									"endLine": 87,
-									"snippet": {
-										"text": "s.db.Offset(int((pageNo - 1) * pageSize)).Limit(int(pageSize)).Order(\"name asc\").Find(\u0026l)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 17,
-									"startLine": 87
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/environment.go"
-								},
-								"region": {
-									"endColumn": 53,
-									"endLine": 87,
-									"snippet": {
-										"text": "s.db.Offset(int((pageNo - 1) * pageSize)).Limit(int(pageSize)).Order(\"name asc\").Find(\u0026l)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 53,
-									"startLine": 87
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/credential.go"
-								},
-								"region": {
-									"endColumn": 53,
-									"endLine": 90,
-									"snippet": {
-										"text": "s.db.Offset(int((pageNo - 1) * pageSize)).Limit(int(pageSize)).Order(\"name asc\").Find(\u0026l)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 53,
-									"startLine": 90
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/credential.go"
-								},
-								"region": {
-									"endColumn": 17,
-									"endLine": 90,
-									"snippet": {
-										"text": "s.db.Offset(int((pageNo - 1) * pageSize)).Limit(int(pageSize)).Order(\"name asc\").Find(\u0026l)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 17,
-									"startLine": 90
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/messages/channels.go"
-								},
-								"region": {
-									"endColumn": 54,
-									"endLine": 117,
-									"snippet": {
-										"text": "log.Debug().Str(\"taskId\", taskId).Int(\"nodeId\", int(nodeId)).Msg(\"Compose logs session ended as client closed connection\")"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 54,
-									"startLine": 117
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 45,
-									"endLine": 190,
-									"snippet": {
-										"text": "log.Debug().Err(err).Int(\"sessionId\", int(sessionId)).Msg(\"Compose logs session ended as client closed connection\")"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 45,
-									"startLine": 190
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 46,
-									"endLine": 188,
-									"snippet": {
-										"text": "log.Debug().Err(err).Int(\"sessionId\", int(sessionId)).Msg(\"Compose logs write error\")"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 46,
-									"startLine": 188
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 45,
-									"endLine": 181,
-									"snippet": {
-										"text": "log.Debug().Err(err).Int(\"sessionId\", int(sessionId)).Msg(\"Compose logs read error\")"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 45,
-									"startLine": 181
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 45,
-									"endLine": 177,
-									"snippet": {
-										"text": "log.Debug().Err(err).Int(\"sessionId\", int(sessionId)).Msg(\"Compose logs session ended as client closed connection\")"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 45,
-									"startLine": 177
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 44,
-									"endLine": 162,
-									"snippet": {
-										"text": "log.Debug().Err(err).Int(\"sessionId\", int(sessionId)).Msg(\"Error while running compose logs\")"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 44,
-									"startLine": 162
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 34,
-									"endLine": 150,
-									"snippet": {
-										"text": "log.Debug().Int(\"sessionId\", int(sessionId)).Msg(\"Starting compose logs session\")"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 34,
-									"startLine": 150
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion uint -\u003e int"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/handler/variable.go"
+									"uri": "variable.go"
 								},
 								"region": {
 									"endColumn": 72,
@@ -658,7 +34,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/user.go"
+									"uri": "user.go"
 								},
 								"region": {
 									"endColumn": 86,
@@ -684,7 +60,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
+									"uri": "node_compose_project_variable.go"
 								},
 								"region": {
 									"endColumn": 130,
@@ -710,7 +86,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 101,
@@ -736,7 +112,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node.go"
+									"uri": "node.go"
 								},
 								"region": {
 									"endColumn": 86,
@@ -762,7 +138,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/environment.go"
+									"uri": "environment.go"
 								},
 								"region": {
 									"endColumn": 100,
@@ -788,7 +164,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/credential.go"
+									"uri": "credential.go"
 								},
 								"region": {
 									"endColumn": 98,
@@ -814,7 +190,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/compose_library.go"
+									"uri": "compose_library.go"
 								},
 								"region": {
 									"endColumn": 114,
@@ -840,7 +216,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/volumes.go"
+									"uri": "volumes.go"
 								},
 								"region": {
 									"endColumn": 119,
@@ -866,7 +242,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/volumes.go"
+									"uri": "volumes.go"
 								},
 								"region": {
 									"endColumn": 64,
@@ -892,7 +268,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/volumes.go"
+									"uri": "volumes.go"
 								},
 								"region": {
 									"endColumn": 115,
@@ -918,7 +294,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/volumes.go"
+									"uri": "volumes.go"
 								},
 								"region": {
 									"endColumn": 8,
@@ -944,7 +320,33 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/variable_value.go"
+									"uri": "variable_value.go"
+								},
+								"region": {
+									"endColumn": 41,
+									"endLine": 81,
+									"snippet": {
+										"text": "m, err := h.variableValueStore.Get(uint(variableId), uint(environmentId))"
+									},
+									"sourceLanguage": "go",
+									"startColumn": 41,
+									"startLine": 81
+								}
+							}
+						}
+					],
+					"message": {
+						"text": "integer overflow conversion int -\u003e uint"
+					},
+					"ruleId": "G115"
+				},
+				{
+					"level": "error",
+					"locations": [
+						{
+							"physicalLocation": {
+								"artifactLocation": {
+									"uri": "variable_value.go"
 								},
 								"region": {
 									"endColumn": 59,
@@ -970,33 +372,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/variable_value.go"
-								},
-								"region": {
-									"endColumn": 41,
-									"endLine": 81,
-									"snippet": {
-										"text": "m, err := h.variableValueStore.Get(uint(variableId), uint(environmentId))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 41,
-									"startLine": 81
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion int -\u003e uint"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/handler/variable_value.go"
+									"uri": "variable_value.go"
 								},
 								"region": {
 									"endColumn": 58,
@@ -1022,7 +398,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/variable_value.go"
+									"uri": "variable_value.go"
 								},
 								"region": {
 									"endColumn": 52,
@@ -1048,7 +424,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/variable_value.go"
+									"uri": "variable_value.go"
 								},
 								"region": {
 									"endColumn": 54,
@@ -1074,7 +450,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/variable_value.go"
+									"uri": "variable_value.go"
 								},
 								"region": {
 									"endColumn": 87,
@@ -1100,7 +476,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/variable_value.go"
+									"uri": "variable_value.go"
 								},
 								"region": {
 									"endColumn": 58,
@@ -1126,7 +502,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/variable_value.go"
+									"uri": "variable_value.go"
 								},
 								"region": {
 									"endColumn": 52,
@@ -1152,7 +528,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/variable.go"
+									"uri": "variable.go"
 								},
 								"region": {
 									"endColumn": 70,
@@ -1178,7 +554,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/variable.go"
+									"uri": "variable.go"
 								},
 								"region": {
 									"endColumn": 40,
@@ -1204,7 +580,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/variable.go"
+									"uri": "variable.go"
 								},
 								"region": {
 									"endColumn": 43,
@@ -1230,7 +606,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/variable.go"
+									"uri": "variable.go"
 								},
 								"region": {
 									"endColumn": 44,
@@ -1256,7 +632,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/variable.go"
+									"uri": "variable.go"
 								},
 								"region": {
 									"endColumn": 38,
@@ -1282,7 +658,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/variable.go"
+									"uri": "variable.go"
 								},
 								"region": {
 									"endColumn": 44,
@@ -1308,7 +684,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/user.go"
+									"uri": "user.go"
 								},
 								"region": {
 									"endColumn": 70,
@@ -1334,7 +710,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/user.go"
+									"uri": "user.go"
 								},
 								"region": {
 									"endColumn": 36,
@@ -1360,7 +736,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/user.go"
+									"uri": "user.go"
 								},
 								"region": {
 									"endColumn": 39,
@@ -1386,7 +762,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/user.go"
+									"uri": "user.go"
 								},
 								"region": {
 									"endColumn": 40,
@@ -1412,7 +788,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/user.go"
+									"uri": "user.go"
 								},
 								"region": {
 									"endColumn": 34,
@@ -1438,7 +814,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/user.go"
+									"uri": "user.go"
 								},
 								"region": {
 									"endColumn": 40,
@@ -1464,7 +840,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
+									"uri": "node_compose_project_variable.go"
 								},
 								"region": {
 									"endColumn": 116,
@@ -1490,7 +866,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
+									"uri": "node_compose_project_variable.go"
 								},
 								"region": {
 									"endColumn": 81,
@@ -1516,7 +892,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
+									"uri": "node_compose_project_variable.go"
 								},
 								"region": {
 									"endColumn": 68,
@@ -1542,33 +918,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
-								},
-								"region": {
-									"endColumn": 58,
-									"endLine": 151,
-									"snippet": {
-										"text": "m, err := h.nodeComposeProjectVariableStore.GetById(uint(nodeComposeProjectid), uint(id))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 58,
-									"startLine": 151
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion int -\u003e uint"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
+									"uri": "node_compose_project_variable.go"
 								},
 								"region": {
 									"endColumn": 86,
@@ -1594,7 +944,33 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
+									"uri": "node_compose_project_variable.go"
+								},
+								"region": {
+									"endColumn": 58,
+									"endLine": 151,
+									"snippet": {
+										"text": "m, err := h.nodeComposeProjectVariableStore.GetById(uint(nodeComposeProjectid), uint(id))"
+									},
+									"sourceLanguage": "go",
+									"startColumn": 58,
+									"startLine": 151
+								}
+							}
+						}
+					],
+					"message": {
+						"text": "integer overflow conversion int -\u003e uint"
+					},
+					"ruleId": "G115"
+				},
+				{
+					"level": "error",
+					"locations": [
+						{
+							"physicalLocation": {
+								"artifactLocation": {
+									"uri": "node_compose_project_variable.go"
 								},
 								"region": {
 									"endColumn": 72,
@@ -1620,33 +996,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
-								},
-								"region": {
-									"endColumn": 89,
-									"endLine": 101,
-									"snippet": {
-										"text": "if err := h.nodeComposeProjectVariableStore.DeleteById(uint(nodeComposeProjectid), uint(id)); err != nil {"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 89,
-									"startLine": 101
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion int -\u003e uint"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
+									"uri": "node_compose_project_variable.go"
 								},
 								"region": {
 									"endColumn": 61,
@@ -1672,7 +1022,33 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
+									"uri": "node_compose_project_variable.go"
+								},
+								"region": {
+									"endColumn": 89,
+									"endLine": 101,
+									"snippet": {
+										"text": "if err := h.nodeComposeProjectVariableStore.DeleteById(uint(nodeComposeProjectid), uint(id)); err != nil {"
+									},
+									"sourceLanguage": "go",
+									"startColumn": 89,
+									"startLine": 101
+								}
+							}
+						}
+					],
+					"message": {
+						"text": "integer overflow conversion int -\u003e uint"
+					},
+					"ruleId": "G115"
+				},
+				{
+					"level": "error",
+					"locations": [
+						{
+							"physicalLocation": {
+								"artifactLocation": {
+									"uri": "node_compose_project_variable.go"
 								},
 								"region": {
 									"endColumn": 90,
@@ -1698,7 +1074,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
+									"uri": "node_compose_project_variable.go"
 								},
 								"region": {
 									"endColumn": 62,
@@ -1724,7 +1100,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
+									"uri": "node_compose_project_variable.go"
 								},
 								"region": {
 									"endColumn": 83,
@@ -1750,7 +1126,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
+									"uri": "node_compose_project_variable.go"
 								},
 								"region": {
 									"endColumn": 56,
@@ -1776,7 +1152,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
+									"uri": "node_compose_project_variable.go"
 								},
 								"region": {
 									"endColumn": 90,
@@ -1802,7 +1178,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
+									"uri": "node_compose_project_variable.go"
 								},
 								"region": {
 									"endColumn": 62,
@@ -1828,7 +1204,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose_project_variable.go"
+									"uri": "node_compose_project_variable.go"
 								},
 								"region": {
 									"endColumn": 70,
@@ -1854,7 +1230,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 63,
@@ -1880,7 +1256,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 49,
@@ -1906,7 +1282,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 74,
@@ -1932,33 +1308,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
-								},
-								"region": {
-									"endColumn": 52,
-									"endLine": 729,
-									"snippet": {
-										"text": "ncp, err := h.nodeComposeProjectStore.GetById(uint(nodeId), uint(id))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 52,
-									"startLine": 729
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion int -\u003e uint"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 66,
@@ -1984,7 +1334,33 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
+								},
+								"region": {
+									"endColumn": 52,
+									"endLine": 729,
+									"snippet": {
+										"text": "ncp, err := h.nodeComposeProjectStore.GetById(uint(nodeId), uint(id))"
+									},
+									"sourceLanguage": "go",
+									"startColumn": 52,
+									"startLine": 729
+								}
+							}
+						}
+					],
+					"message": {
+						"text": "integer overflow conversion int -\u003e uint"
+					},
+					"ruleId": "G115"
+				},
+				{
+					"level": "error",
+					"locations": [
+						{
+							"physicalLocation": {
+								"artifactLocation": {
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 69,
@@ -2010,33 +1386,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
-								},
-								"region": {
-									"endColumn": 52,
-									"endLine": 697,
-									"snippet": {
-										"text": "ncp, err := h.nodeComposeProjectStore.GetById(uint(nodeId), uint(id))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 52,
-									"startLine": 697
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion int -\u003e uint"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 66,
@@ -2062,7 +1412,33 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
+								},
+								"region": {
+									"endColumn": 52,
+									"endLine": 697,
+									"snippet": {
+										"text": "ncp, err := h.nodeComposeProjectStore.GetById(uint(nodeId), uint(id))"
+									},
+									"sourceLanguage": "go",
+									"startColumn": 52,
+									"startLine": 697
+								}
+							}
+						}
+					],
+					"message": {
+						"text": "integer overflow conversion int -\u003e uint"
+					},
+					"ruleId": "G115"
+				},
+				{
+					"level": "error",
+					"locations": [
+						{
+							"physicalLocation": {
+								"artifactLocation": {
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 69,
@@ -2088,33 +1464,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
-								},
-								"region": {
-									"endColumn": 66,
-									"endLine": 651,
-									"snippet": {
-										"text": "ncp, err := h.nodeComposeProjectStore.GetById(uint(nodeId), uint(id))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 66,
-									"startLine": 651
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion int -\u003e uint"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 52,
@@ -2140,7 +1490,33 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
+								},
+								"region": {
+									"endColumn": 66,
+									"endLine": 651,
+									"snippet": {
+										"text": "ncp, err := h.nodeComposeProjectStore.GetById(uint(nodeId), uint(id))"
+									},
+									"sourceLanguage": "go",
+									"startColumn": 66,
+									"startLine": 651
+								}
+							}
+						}
+					],
+					"message": {
+						"text": "integer overflow conversion int -\u003e uint"
+					},
+					"ruleId": "G115"
+				},
+				{
+					"level": "error",
+					"locations": [
+						{
+							"physicalLocation": {
+								"artifactLocation": {
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 67,
@@ -2166,7 +1542,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 56,
@@ -2192,7 +1568,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 40,
@@ -2218,33 +1594,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
-								},
-								"region": {
-									"endColumn": 52,
-									"endLine": 595,
-									"snippet": {
-										"text": "ncp, err := h.nodeComposeProjectStore.GetById(uint(nodeId), uint(id))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 52,
-									"startLine": 595
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion int -\u003e uint"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 66,
@@ -2270,7 +1620,33 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
+								},
+								"region": {
+									"endColumn": 52,
+									"endLine": 595,
+									"snippet": {
+										"text": "ncp, err := h.nodeComposeProjectStore.GetById(uint(nodeId), uint(id))"
+									},
+									"sourceLanguage": "go",
+									"startColumn": 52,
+									"startLine": 595
+								}
+							}
+						}
+					],
+					"message": {
+						"text": "integer overflow conversion int -\u003e uint"
+					},
+					"ruleId": "G115"
+				},
+				{
+					"level": "error",
+					"locations": [
+						{
+							"physicalLocation": {
+								"artifactLocation": {
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 69,
@@ -2296,7 +1672,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 56,
@@ -2322,7 +1698,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 40,
@@ -2348,7 +1724,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 66,
@@ -2374,7 +1750,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 52,
@@ -2400,7 +1776,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 71,
@@ -2426,7 +1802,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 56,
@@ -2452,7 +1828,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 40,
@@ -2478,33 +1854,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
-								},
-								"region": {
-									"endColumn": 66,
-									"endLine": 483,
-									"snippet": {
-										"text": "ncp, err := h.nodeComposeProjectStore.GetById(uint(nodeId), uint(id))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 66,
-									"startLine": 483
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion int -\u003e uint"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 52,
@@ -2530,7 +1880,33 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
+								},
+								"region": {
+									"endColumn": 66,
+									"endLine": 483,
+									"snippet": {
+										"text": "ncp, err := h.nodeComposeProjectStore.GetById(uint(nodeId), uint(id))"
+									},
+									"sourceLanguage": "go",
+									"startColumn": 66,
+									"startLine": 483
+								}
+							}
+						}
+					],
+					"message": {
+						"text": "integer overflow conversion int -\u003e uint"
+					},
+					"ruleId": "G115"
+				},
+				{
+					"level": "error",
+					"locations": [
+						{
+							"physicalLocation": {
+								"artifactLocation": {
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 94,
@@ -2556,7 +1932,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 73,
@@ -2582,7 +1958,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 60,
@@ -2608,7 +1984,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 62,
@@ -2634,7 +2010,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 44,
@@ -2660,7 +2036,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 75,
@@ -2686,7 +2062,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 46,
@@ -2712,33 +2088,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
-								},
-								"region": {
-									"endColumn": 64,
-									"endLine": 251,
-									"snippet": {
-										"text": "m, err := h.nodeComposeProjectStore.GetById(uint(nodeId), uint(id))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 64,
-									"startLine": 251
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion int -\u003e uint"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 50,
@@ -2764,7 +2114,33 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
+								},
+								"region": {
+									"endColumn": 64,
+									"endLine": 251,
+									"snippet": {
+										"text": "m, err := h.nodeComposeProjectStore.GetById(uint(nodeId), uint(id))"
+									},
+									"sourceLanguage": "go",
+									"startColumn": 64,
+									"startLine": 251
+								}
+							}
+						}
+					],
+					"message": {
+						"text": "integer overflow conversion int -\u003e uint"
+					},
+					"ruleId": "G115"
+				},
+				{
+					"level": "error",
+					"locations": [
+						{
+							"physicalLocation": {
+								"artifactLocation": {
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 75,
@@ -2790,7 +2166,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 47,
@@ -2816,7 +2192,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 64,
@@ -2842,7 +2218,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 50,
@@ -2868,7 +2244,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 62,
@@ -2894,7 +2270,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 44,
@@ -2920,7 +2296,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 62,
@@ -2946,7 +2322,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 44,
@@ -2972,7 +2348,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 135,
@@ -2998,7 +2374,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 66,
@@ -3024,7 +2400,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 52,
@@ -3050,7 +2426,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 102,
@@ -3076,7 +2452,33 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
+								},
+								"region": {
+									"endColumn": 66,
+									"endLine": 75,
+									"snippet": {
+										"text": "ncp, err := h.nodeComposeProjectStore.GetById(uint(nodeId), uint(id))"
+									},
+									"sourceLanguage": "go",
+									"startColumn": 66,
+									"startLine": 75
+								}
+							}
+						}
+					],
+					"message": {
+						"text": "integer overflow conversion int -\u003e uint"
+					},
+					"ruleId": "G115"
+				},
+				{
+					"level": "error",
+					"locations": [
+						{
+							"physicalLocation": {
+								"artifactLocation": {
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 52,
@@ -3102,33 +2504,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
-								},
-								"region": {
-									"endColumn": 66,
-									"endLine": 75,
-									"snippet": {
-										"text": "ncp, err := h.nodeComposeProjectStore.GetById(uint(nodeId), uint(id))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 66,
-									"startLine": 75
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "integer overflow conversion int -\u003e uint"
-					},
-					"ruleId": "G115"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 117,
@@ -3154,7 +2530,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node_compose.go"
+									"uri": "node_compose.go"
 								},
 								"region": {
 									"endColumn": 64,
@@ -3180,7 +2556,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node.go"
+									"uri": "node.go"
 								},
 								"region": {
 									"endColumn": 50,
@@ -3206,7 +2582,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node.go"
+									"uri": "node.go"
 								},
 								"region": {
 									"endColumn": 36,
@@ -3232,7 +2608,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node.go"
+									"uri": "node.go"
 								},
 								"region": {
 									"endColumn": 66,
@@ -3258,7 +2634,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node.go"
+									"uri": "node.go"
 								},
 								"region": {
 									"endColumn": 36,
@@ -3284,7 +2660,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node.go"
+									"uri": "node.go"
 								},
 								"region": {
 									"endColumn": 36,
@@ -3310,7 +2686,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node.go"
+									"uri": "node.go"
 								},
 								"region": {
 									"endColumn": 39,
@@ -3336,7 +2712,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node.go"
+									"uri": "node.go"
 								},
 								"region": {
 									"endColumn": 40,
@@ -3362,7 +2738,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node.go"
+									"uri": "node.go"
 								},
 								"region": {
 									"endColumn": 51,
@@ -3388,7 +2764,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node.go"
+									"uri": "node.go"
 								},
 								"region": {
 									"endColumn": 50,
@@ -3414,7 +2790,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node.go"
+									"uri": "node.go"
 								},
 								"region": {
 									"endColumn": 36,
@@ -3440,7 +2816,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node.go"
+									"uri": "node.go"
 								},
 								"region": {
 									"endColumn": 34,
@@ -3466,7 +2842,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/node.go"
+									"uri": "node.go"
 								},
 								"region": {
 									"endColumn": 36,
@@ -3492,7 +2868,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/networks.go"
+									"uri": "networks.go"
 								},
 								"region": {
 									"endColumn": 121,
@@ -3518,7 +2894,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/networks.go"
+									"uri": "networks.go"
 								},
 								"region": {
 									"endColumn": 65,
@@ -3544,7 +2920,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/networks.go"
+									"uri": "networks.go"
 								},
 								"region": {
 									"endColumn": 117,
@@ -3570,7 +2946,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/networks.go"
+									"uri": "networks.go"
 								},
 								"region": {
 									"endColumn": 8,
@@ -3596,7 +2972,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/images.go"
+									"uri": "images.go"
 								},
 								"region": {
 									"endColumn": 117,
@@ -3622,7 +2998,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/images.go"
+									"uri": "images.go"
 								},
 								"region": {
 									"endColumn": 63,
@@ -3648,7 +3024,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/images.go"
+									"uri": "images.go"
 								},
 								"region": {
 									"endColumn": 113,
@@ -3674,7 +3050,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/environment.go"
+									"uri": "environment.go"
 								},
 								"region": {
 									"endColumn": 73,
@@ -3700,7 +3076,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/environment.go"
+									"uri": "environment.go"
 								},
 								"region": {
 									"endColumn": 43,
@@ -3726,7 +3102,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/environment.go"
+									"uri": "environment.go"
 								},
 								"region": {
 									"endColumn": 43,
@@ -3752,7 +3128,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/environment.go"
+									"uri": "environment.go"
 								},
 								"region": {
 									"endColumn": 46,
@@ -3778,7 +3154,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/environment.go"
+									"uri": "environment.go"
 								},
 								"region": {
 									"endColumn": 47,
@@ -3804,7 +3180,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/environment.go"
+									"uri": "environment.go"
 								},
 								"region": {
 									"endColumn": 47,
@@ -3830,7 +3206,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/environment.go"
+									"uri": "environment.go"
 								},
 								"region": {
 									"endColumn": 41,
@@ -3856,7 +3232,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/environment.go"
+									"uri": "environment.go"
 								},
 								"region": {
 									"endColumn": 43,
@@ -3882,7 +3258,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/credential.go"
+									"uri": "credential.go"
 								},
 								"region": {
 									"endColumn": 72,
@@ -3908,7 +3284,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/credential.go"
+									"uri": "credential.go"
 								},
 								"region": {
 									"endColumn": 42,
@@ -3934,7 +3310,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/credential.go"
+									"uri": "credential.go"
 								},
 								"region": {
 									"endColumn": 45,
@@ -3960,7 +3336,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/credential.go"
+									"uri": "credential.go"
 								},
 								"region": {
 									"endColumn": 46,
@@ -3986,7 +3362,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/credential.go"
+									"uri": "credential.go"
 								},
 								"region": {
 									"endColumn": 46,
@@ -4012,7 +3388,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/credential.go"
+									"uri": "credential.go"
 								},
 								"region": {
 									"endColumn": 46,
@@ -4038,7 +3414,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/credential.go"
+									"uri": "credential.go"
 								},
 								"region": {
 									"endColumn": 42,
@@ -4064,7 +3440,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/credential.go"
+									"uri": "credential.go"
 								},
 								"region": {
 									"endColumn": 47,
@@ -4090,7 +3466,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/credential.go"
+									"uri": "credential.go"
 								},
 								"region": {
 									"endColumn": 42,
@@ -4116,7 +3492,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/containers.go"
+									"uri": "containers.go"
 								},
 								"region": {
 									"endColumn": 75,
@@ -4142,7 +3518,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/containers.go"
+									"uri": "containers.go"
 								},
 								"region": {
 									"endColumn": 71,
@@ -4168,7 +3544,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/containers.go"
+									"uri": "containers.go"
 								},
 								"region": {
 									"endColumn": 67,
@@ -4194,7 +3570,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/containers.go"
+									"uri": "containers.go"
 								},
 								"region": {
 									"endColumn": 68,
@@ -4220,7 +3596,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/containers.go"
+									"uri": "containers.go"
 								},
 								"region": {
 									"endColumn": 65,
@@ -4246,7 +3622,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/containers.go"
+									"uri": "containers.go"
 								},
 								"region": {
 									"endColumn": 66,
@@ -4272,7 +3648,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/containers.go"
+									"uri": "containers.go"
 								},
 								"region": {
 									"endColumn": 121,
@@ -4298,7 +3674,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/compose_library.go"
+									"uri": "compose_library.go"
 								},
 								"region": {
 									"endColumn": 46,
@@ -4324,7 +3700,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/compose_library.go"
+									"uri": "compose_library.go"
 								},
 								"region": {
 									"endColumn": 49,
@@ -4350,7 +3726,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/compose_library.go"
+									"uri": "compose_library.go"
 								},
 								"region": {
 									"endColumn": 50,
@@ -4376,7 +3752,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/compose_library.go"
+									"uri": "compose_library.go"
 								},
 								"region": {
 									"endColumn": 50,
@@ -4402,7 +3778,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/compose_library.go"
+									"uri": "compose_library.go"
 								},
 								"region": {
 									"endColumn": 46,
@@ -4428,7 +3804,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/compose_library.go"
+									"uri": "compose_library.go"
 								},
 								"region": {
 									"endColumn": 12,
@@ -4449,636 +3825,12 @@
 					"ruleId": "G115"
 				},
 				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 9,
-									"endLine": 290,
-									"snippet": {
-										"text": "cmd = exec.Command(\"docker-compose\", \"-p\", projectName, \"--env-file\", envfile, \"-f\", composefile, action)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 9,
-									"startLine": 290
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Subprocess launched with variable"
-					},
-					"ruleId": "G204"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 9,
-									"endLine": 288,
-									"snippet": {
-										"text": "cmd = exec.Command(\"docker-compose\", \"-p\", projectName, \"--env-file\", envfile, action)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 9,
-									"startLine": 288
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Subprocess launched with variable"
-					},
-					"ruleId": "G204"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 9,
-									"endLine": 286,
-									"snippet": {
-										"text": "cmd = exec.Command(\"docker-compose\", \"-p\", projectName, \"--env-file\", envfile, \"-f\", composefile, action, \"-d\")"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 9,
-									"startLine": 286
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Subprocess launched with variable"
-					},
-					"ruleId": "G204"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 9,
-									"endLine": 366,
-									"snippet": {
-										"text": "cmd := exec.Command(\"docker-compose\", \"-p\", req.ProjectName, \"down\")"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 9,
-									"startLine": 366
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Subprocess launched with a potential tainted input or cmd arguments"
-					},
-					"ruleId": "G204"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 9,
-									"endLine": 157,
-									"snippet": {
-										"text": "cmd := exec.Command(\"docker-compose\", \"-p\", req.ProjectName, \"logs\", \"-f\")"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 9,
-									"startLine": 157
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Subprocess launched with a potential tainted input or cmd arguments"
-					},
-					"ruleId": "G204"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 9,
-									"endLine": 104,
-									"snippet": {
-										"text": "cmd := exec.Command(\"docker-compose\", \"-p\", req.ProjectName, \"ps\", \"-a\", \"--format=json\")"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 9,
-									"startLine": 104
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Subprocess launched with a potential tainted input or cmd arguments"
-					},
-					"ruleId": "G204"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/compose_library_local.go"
-								},
-								"region": {
-									"endColumn": 26,
-									"endLine": 131,
-									"snippet": {
-										"text": "definitionBytes, err := os.ReadFile(composeProjectFilePath)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 26,
-									"startLine": 131
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Potential file inclusion via variable"
-					},
-					"ruleId": "G304"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/compose_library_local.go"
-								},
-								"region": {
-									"endColumn": 12,
-									"endLine": 97,
-									"snippet": {
-										"text": "f, err := os.OpenFile(composeProjectFilePath, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 12,
-									"startLine": 97
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Potential file inclusion via variable"
-					},
-					"ruleId": "G304"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/compose_library_local.go"
-								},
-								"region": {
-									"endColumn": 13,
-									"endLine": 38,
-									"snippet": {
-										"text": "f, err := os.OpenFile(filename, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 13,
-									"startLine": 38
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Potential file inclusion via variable"
-					},
-					"ruleId": "G304"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/server.go"
-								},
-								"region": {
-									"endColumn": 19,
-									"endLine": 236,
-									"snippet": {
-										"text": "keyFile, err := os.Create(keyPath)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 19,
-									"startLine": 236
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Potential file inclusion via variable"
-					},
-					"ruleId": "G304"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/server.go"
-								},
-								"region": {
-									"endColumn": 20,
-									"endLine": 227,
-									"snippet": {
-										"text": "certFile, err := os.Create(certPath)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 20,
-									"startLine": 227
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Potential file inclusion via variable"
-					},
-					"ruleId": "G304"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/server.go"
-								},
-								"region": {
-									"endColumn": 19,
-									"endLine": 127,
-									"snippet": {
-										"text": "keyBytes, err := os.ReadFile(keyFile)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 19,
-									"startLine": 127
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Potential file inclusion via variable"
-					},
-					"ruleId": "G304"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/server.go"
-								},
-								"region": {
-									"endColumn": 13,
-									"endLine": 116,
-									"snippet": {
-										"text": "f, err := os.Create(keyFile)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 13,
-									"startLine": 116
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Potential file inclusion via variable"
-					},
-					"ruleId": "G304"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 18,
-									"endLine": 220,
-									"snippet": {
-										"text": "envFile, err := os.Create(envFilename)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 18,
-									"startLine": 220
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Potential file inclusion via variable"
-					},
-					"ruleId": "G304"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 22,
-									"endLine": 207,
-									"snippet": {
-										"text": "composeFile, err := os.Create(composeFilename)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 22,
-									"startLine": 207
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Potential file inclusion via variable"
-					},
-					"ruleId": "G304"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/compose_library_local.go"
-								},
-								"region": {
-									"endColumn": 12,
-									"endLine": 97,
-									"snippet": {
-										"text": "f, err := os.OpenFile(composeProjectFilePath, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 12,
-									"startLine": 97
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Expect file permissions to be 0600 or less"
-					},
-					"ruleId": "G302"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/compose_library_local.go"
-								},
-								"region": {
-									"endColumn": 13,
-									"endLine": 38,
-									"snippet": {
-										"text": "f, err := os.OpenFile(filename, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0755)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 13,
-									"startLine": 38
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Expect file permissions to be 0600 or less"
-					},
-					"ruleId": "G302"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/compose_library_local.go"
-								},
-								"region": {
-									"endColumn": 10,
-									"endLine": 31,
-									"snippet": {
-										"text": "err := os.MkdirAll(p, 0755)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 10,
-									"startLine": 31
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Expect directory permissions to be 0750 or less"
-					},
-					"ruleId": "G301"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/server.go"
-								},
-								"region": {
-									"endColumn": 10,
-									"endLine": 214,
-									"snippet": {
-										"text": "err := os.MkdirAll(certDirPath, os.ModePerm)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 10,
-									"startLine": 214
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Expect directory permissions to be 0750 or less"
-					},
-					"ruleId": "G301"
-				},
-				{
-					"level": "error",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/server.go"
-								},
-								"region": {
-									"endColumn": 2,
-									"endLine": 109,
-									"snippet": {
-										"text": "os.MkdirAll(composeProjectsPath, os.ModePerm)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 2,
-									"startLine": 109
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Expect directory permissions to be 0750 or less"
-					},
-					"ruleId": "G301"
-				},
-				{
 					"level": "warning",
 					"locations": [
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/store/compose_library_local.go"
-								},
-								"region": {
-									"endColumn": 2,
-									"endLine": 102,
-									"snippet": {
-										"text": "f.WriteString(m.Definition)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 2,
-									"startLine": 102
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/store/compose_library_local.go"
-								},
-								"region": {
-									"endColumn": 3,
-									"endLine": 43,
-									"snippet": {
-										"text": "f.WriteString(m.Definition)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 3,
-									"startLine": 43
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/server.go"
-								},
-								"region": {
-									"endColumn": 3,
-									"endLine": 124,
-									"snippet": {
-										"text": "f.WriteString(key)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 3,
-									"startLine": 124
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/server.go"
-								},
-								"region": {
-									"endColumn": 2,
-									"endLine": 109,
-									"snippet": {
-										"text": "os.MkdirAll(composeProjectsPath, os.ModePerm)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 2,
-									"startLine": 109
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/server/handler/websocket.go"
+									"uri": "websocket.go"
 								},
 								"region": {
 									"endColumn": 3,
@@ -5104,7 +3856,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/websocket.go"
+									"uri": "websocket.go"
 								},
 								"region": {
 									"endColumn": 3,
@@ -5130,7 +3882,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/websocket.go"
+									"uri": "websocket.go"
 								},
 								"region": {
 									"endColumn": 3,
@@ -5156,7 +3908,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/websocket.go"
+									"uri": "websocket.go"
 								},
 								"region": {
 									"endColumn": 3,
@@ -5182,7 +3934,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/websocket.go"
+									"uri": "websocket.go"
 								},
 								"region": {
 									"endColumn": 2,
@@ -5208,7 +3960,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/websocket.go"
+									"uri": "websocket.go"
 								},
 								"region": {
 									"endColumn": 3,
@@ -5234,7 +3986,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/websocket.go"
+									"uri": "websocket.go"
 								},
 								"region": {
 									"endColumn": 6,
@@ -5260,7 +4012,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/websocket.go"
+									"uri": "websocket.go"
 								},
 								"region": {
 									"endColumn": 6,
@@ -5286,7 +4038,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/websocket.go"
+									"uri": "websocket.go"
 								},
 								"region": {
 									"endColumn": 7,
@@ -5312,7 +4064,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/websocket.go"
+									"uri": "websocket.go"
 								},
 								"region": {
 									"endColumn": 2,
@@ -5338,7 +4090,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/websocket.go"
+									"uri": "websocket.go"
 								},
 								"region": {
 									"endColumn": 3,
@@ -5364,7 +4116,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/websocket.go"
+									"uri": "websocket.go"
 								},
 								"region": {
 									"endColumn": 2,
@@ -5390,7 +4142,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/websocket.go"
+									"uri": "websocket.go"
 								},
 								"region": {
 									"endColumn": 3,
@@ -5416,7 +4168,7 @@
 						{
 							"physicalLocation": {
 								"artifactLocation": {
-									"uri": "pkg/server/handler/websocket.go"
+									"uri": "websocket.go"
 								},
 								"region": {
 									"endColumn": 3,
@@ -5427,500 +4179,6 @@
 									"sourceLanguage": "go",
 									"startColumn": 3,
 									"startLine": 34
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/messages/functions.go"
-								},
-								"region": {
-									"endColumn": 2,
-									"endLine": 53,
-									"snippet": {
-										"text": "json.Unmarshal(messageJson, \u0026receivedMessage)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 2,
-									"startLine": 53
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/container_stale_check.go"
-								},
-								"region": {
-									"endColumn": 3,
-									"endLine": 54,
-									"snippet": {
-										"text": "ContainerRefreshStaleStatus()"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 3,
-									"startLine": 54
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/container.go"
-								},
-								"region": {
-									"endColumn": 4,
-									"endLine": 225,
-									"snippet": {
-										"text": "hijackedResponse.Conn.Write(inputBytes)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 4,
-									"startLine": 225
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/container.go"
-								},
-								"region": {
-									"endColumn": 4,
-									"endLine": 210,
-									"snippet": {
-										"text": "wsBrowser.Close()"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 4,
-									"startLine": 210
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/container.go"
-								},
-								"region": {
-									"endColumn": 4,
-									"endLine": 209,
-									"snippet": {
-										"text": "hijackedResponse.Conn.Close()"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 4,
-									"startLine": 209
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 2,
-									"endLine": 322,
-									"snippet": {
-										"text": "ws.WriteMessage(websocket.TextMessage, []byte(fmt.Sprintf(\"\\n*** COMPLETED ACTION: %s ***\\n\\n\", action)))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 2,
-									"startLine": 322
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 2,
-									"endLine": 296,
-									"snippet": {
-										"text": "ws.WriteMessage(websocket.TextMessage, []byte(fmt.Sprintf(\"\\n*** STARTING ACTION: %s ***\\n\\n\", action)))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 2,
-									"startLine": 296
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 3,
-									"endLine": 280,
-									"snippet": {
-										"text": "os.RemoveAll(dir)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 3,
-									"startLine": 280
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 4,
-									"endLine": 267,
-									"snippet": {
-										"text": "ws.WriteMessage(websocket.TextMessage, []byte(fmt.Sprintf(\"%s=%s\\n\", k, val)))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 4,
-									"startLine": 267
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 3,
-									"endLine": 252,
-									"snippet": {
-										"text": "ws.WriteMessage(websocket.TextMessage, []byte(\"*** SETTING BELOW VARIABLES: ***\\n\\n\"))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 3,
-									"startLine": 252
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 4,
-									"endLine": 169,
-									"snippet": {
-										"text": "f.Close()"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 4,
-									"startLine": 169
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/compose.go"
-								},
-								"region": {
-									"endColumn": 2,
-									"endLine": 66,
-									"snippet": {
-										"text": "json.Unmarshal(outb.Bytes(), \u0026itemsInternal)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 2,
-									"startLine": 66
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/common.go"
-								},
-								"region": {
-									"endColumn": 41,
-									"endLine": 32,
-									"snippet": {
-										"text": "ws.SetPongHandler(func(string) error { ws.SetReadDeadline(time.Now().Add(pongWait)); return nil })"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 41,
-									"startLine": 32
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/common.go"
-								},
-								"region": {
-									"endColumn": 2,
-									"endLine": 31,
-									"snippet": {
-										"text": "ws.SetReadDeadline(time.Now().Add(pongWait))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 2,
-									"startLine": 31
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/dockerapi/common.go"
-								},
-								"region": {
-									"endColumn": 4,
-									"endLine": 22,
-									"snippet": {
-										"text": "ws.Close()"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 4,
-									"startLine": 22
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/agent/tasks.go"
-								},
-								"region": {
-									"endColumn": 2,
-									"endLine": 29,
-									"snippet": {
-										"text": "messages.Send(c, messages.TaskSessionMessage{ConnectionToken: token, TaskId: tqm.TaskId, Stream: stream})"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 2,
-									"startLine": 29
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/agent/agent.go"
-								},
-								"region": {
-									"endColumn": 4,
-									"endLine": 408,
-									"snippet": {
-										"text": "c.WriteMessage(websocket.CloseMessage, websocket.FormatCloseMessage(websocket.CloseNormalClosure, \"\"))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 4,
-									"startLine": 408
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/agent/agent.go"
-								},
-								"region": {
-									"endColumn": 2,
-									"endLine": 383,
-									"snippet": {
-										"text": "messages.Send[messages.ConnectMessage](c, initialConnectMessage)"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 2,
-									"startLine": 383
-								}
-							}
-						}
-					],
-					"message": {
-						"text": "Errors unhandled"
-					},
-					"ruleId": "G104"
-				},
-				{
-					"level": "warning",
-					"locations": [
-						{
-							"physicalLocation": {
-								"artifactLocation": {
-									"uri": "pkg/agent/agent.go"
-								},
-								"region": {
-									"endColumn": 3,
-									"endLine": 332,
-									"snippet": {
-										"text": "ws.SetReadDeadline(time.Now().Add(pongWait))"
-									},
-									"sourceLanguage": "go",
-									"startColumn": 3,
-									"startLine": 332
 								}
 							}
 						}
@@ -5959,28 +4217,6 @@
 						},
 						{
 							"fullDescription": {
-								"text": "The software uses external input to construct a pathname that is intended to identify a file or directory that is located underneath a restricted parent directory, but the software does not properly neutralize special elements within the pathname that can cause the pathname to resolve to a location that is outside of the restricted directory."
-							},
-							"guid": "3e718404-88bc-3f17-883e-e85e74078a76",
-							"helpUri": "https://cwe.mitre.org/data/definitions/22.html",
-							"id": "22",
-							"shortDescription": {
-								"text": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
-							}
-						},
-						{
-							"fullDescription": {
-								"text": "During installation, installed file permissions are set to allow anyone to modify those files."
-							},
-							"guid": "fca8970d-b44c-3162-a385-cc09266d12a4",
-							"helpUri": "https://cwe.mitre.org/data/definitions/276.html",
-							"id": "276",
-							"shortDescription": {
-								"text": "Incorrect Default Permissions"
-							}
-						},
-						{
-							"fullDescription": {
 								"text": "The software does not properly anticipate or handle exceptional conditions that rarely occur during normal operation of the software."
 							},
 							"guid": "7df38d1d-038e-3ced-8601-8d9265b90a25",
@@ -5988,17 +4224,6 @@
 							"id": "703",
 							"shortDescription": {
 								"text": "Improper Check or Handling of Exceptional Conditions"
-							}
-						},
-						{
-							"fullDescription": {
-								"text": "The software constructs all or part of an OS command using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended OS command when it is sent to a downstream component."
-							},
-							"guid": "1a37bf66-7c5a-3aa0-94bb-ffae58a9e01c",
-							"helpUri": "https://cwe.mitre.org/data/definitions/78.html",
-							"id": "78",
-							"shortDescription": {
-								"text": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
 							}
 						}
 					],
@@ -6054,162 +4279,10 @@
 								"level": "error"
 							},
 							"fullDescription": {
-								"text": "Expect directory permissions to be 0750 or less"
+								"text": "integer overflow conversion int64 -\u003e uint"
 							},
 							"help": {
-								"text": "Expect directory permissions to be 0750 or less\nSeverity: MEDIUM\nConfidence: HIGH\n"
-							},
-							"id": "G301",
-							"name": "Incorrect Default Permissions",
-							"properties": {
-								"precision": "high",
-								"tags": [
-									"security",
-									"MEDIUM"
-								]
-							},
-							"relationships": [
-								{
-									"kinds": [
-										"superset"
-									],
-									"target": {
-										"guid": "fca8970d-b44c-3162-a385-cc09266d12a4",
-										"id": "276",
-										"toolComponent": {
-											"guid": "f2856fc0-85b7-373f-83e7-6f8582243547",
-											"name": "CWE"
-										}
-									}
-								}
-							],
-							"shortDescription": {
-								"text": "Expect directory permissions to be 0750 or less"
-							}
-						},
-						{
-							"defaultConfiguration": {
-								"level": "error"
-							},
-							"fullDescription": {
-								"text": "Expect file permissions to be 0600 or less"
-							},
-							"help": {
-								"text": "Expect file permissions to be 0600 or less\nSeverity: MEDIUM\nConfidence: HIGH\n"
-							},
-							"id": "G302",
-							"name": "Incorrect Default Permissions",
-							"properties": {
-								"precision": "high",
-								"tags": [
-									"security",
-									"MEDIUM"
-								]
-							},
-							"relationships": [
-								{
-									"kinds": [
-										"superset"
-									],
-									"target": {
-										"guid": "fca8970d-b44c-3162-a385-cc09266d12a4",
-										"id": "276",
-										"toolComponent": {
-											"guid": "f2856fc0-85b7-373f-83e7-6f8582243547",
-											"name": "CWE"
-										}
-									}
-								}
-							],
-							"shortDescription": {
-								"text": "Expect file permissions to be 0600 or less"
-							}
-						},
-						{
-							"defaultConfiguration": {
-								"level": "error"
-							},
-							"fullDescription": {
-								"text": "Potential file inclusion via variable"
-							},
-							"help": {
-								"text": "Potential file inclusion via variable\nSeverity: MEDIUM\nConfidence: HIGH\n"
-							},
-							"id": "G304",
-							"name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
-							"properties": {
-								"precision": "high",
-								"tags": [
-									"security",
-									"MEDIUM"
-								]
-							},
-							"relationships": [
-								{
-									"kinds": [
-										"superset"
-									],
-									"target": {
-										"guid": "3e718404-88bc-3f17-883e-e85e74078a76",
-										"id": "22",
-										"toolComponent": {
-											"guid": "f2856fc0-85b7-373f-83e7-6f8582243547",
-											"name": "CWE"
-										}
-									}
-								}
-							],
-							"shortDescription": {
-								"text": "Potential file inclusion via variable"
-							}
-						},
-						{
-							"defaultConfiguration": {
-								"level": "error"
-							},
-							"fullDescription": {
-								"text": "Subprocess launched with variable"
-							},
-							"help": {
-								"text": "Subprocess launched with variable\nSeverity: MEDIUM\nConfidence: HIGH\n"
-							},
-							"id": "G204",
-							"name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
-							"properties": {
-								"precision": "high",
-								"tags": [
-									"security",
-									"MEDIUM"
-								]
-							},
-							"relationships": [
-								{
-									"kinds": [
-										"superset"
-									],
-									"target": {
-										"guid": "1a37bf66-7c5a-3aa0-94bb-ffae58a9e01c",
-										"id": "78",
-										"toolComponent": {
-											"guid": "f2856fc0-85b7-373f-83e7-6f8582243547",
-											"name": "CWE"
-										}
-									}
-								}
-							],
-							"shortDescription": {
-								"text": "Subprocess launched with variable"
-							}
-						},
-						{
-							"defaultConfiguration": {
-								"level": "error"
-							},
-							"fullDescription": {
-								"text": "integer overflow conversion uint -\u003e int"
-							},
-							"help": {
-								"text": "integer overflow conversion uint -\u003e int\nSeverity: HIGH\nConfidence: MEDIUM\n"
+								"text": "integer overflow conversion int64 -\u003e uint\nSeverity: HIGH\nConfidence: MEDIUM\n"
 							},
 							"id": "G115",
 							"name": "Integer Overflow or Wraparound",
@@ -6236,7 +4309,7 @@
 								}
 							],
 							"shortDescription": {
-								"text": "integer overflow conversion uint -\u003e int"
+								"text": "integer overflow conversion int64 -\u003e uint"
 							}
 						}
 					],
