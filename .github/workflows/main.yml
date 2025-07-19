@@ -90,11 +90,16 @@ jobs:
 
      
       # Étape 11 : Horusec - Plateforme d’analyse de sécurité multi-outils
+     # Étape 11 : Horusec - Plateforme d’analyse de sécurité multi-outils
       - name: Run Horusec
         run: |
           sudo systemctl start docker
+          docker --version
+
           curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | sh -s latest
-          horusec start -p . -o json -O horusec-results.json
+
+          horusec start -p . -o json -O horusec-results.json 
+
         #continue-on-error: true
  
      # Étape 13 : SonarQube Scan Action  123 --
