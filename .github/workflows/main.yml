@@ -86,16 +86,19 @@ jobs:
         run: |
           curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
           trivy fs --format sarif --output trivy-results.sarif .
-        continue-on-error: true
+        #continue-on-error: true
 
      
       # Étape 11 : Horusec - Plateforme d’analyse de sécurité multi-outils
      # Étape 11 : Horusec - Plateforme d’analyse de sécurité multi-outils
-      - name: Run Horusec
-        run: |
-          docker run -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd):/src horuszup/horusec-cli:latest horusec start -p /src -P $(pwd) -o json -O /src/horusec-results.json
-        env:
-          DOCKER_HOST: tcp://docker:2375
+      #- name: Run Horusec
+      #  run: |
+      #    sudo systemctl start docker
+      #    docker --version
+
+      #    curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | sh -s latest
+
+      #    horusec start -p . -o json -O horusec-results.json 
 
         #continue-on-error: true
  
@@ -108,8 +111,7 @@ jobs:
         with:
           projectBaseDir: .
           args: >
-            -Dsonar.projectKey=dokemon
-            -Dsonar.externalIssuesReportPaths=gosec-results.sarif
+            -Dsonar.projectKey=dokemon 
             -X
 
         #-Dsonar.externalIssuesReportPaths=gosec-results.sarif,codeql-results.sarif,dependency-check-report.sarif,semgrep-results.sarif,trivy-results.sarif

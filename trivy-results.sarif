@@ -10,6 +10,33 @@
           "name": "Trivy",
           "rules": [
             {
+              "id": "CVE-2024-6484",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "A vulnerability has been identified in Bootstrap that exposes users to ..."
+              },
+              "fullDescription": {
+                "text": "A vulnerability has been identified in Bootstrap that exposes users to Cross-Site Scripting (XSS) attacks. The issue is present in the carousel component, where the data-slide and data-slide-to attributes can be exploited through the href attribute of an \u003ca\u003e tag due to inadequate sanitization. This vulnerability could potentially enable attackers to execute arbitrary JavaScript within the victim's browser."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-6484",
+              "help": {
+                "text": "Vulnerability CVE-2024-6484\nSeverity: MEDIUM\nPackage: bootstrap\nFixed Version: \nLink: [CVE-2024-6484](https://avd.aquasec.com/nvd/cve-2024-6484)\nA vulnerability has been identified in Bootstrap that exposes users to Cross-Site Scripting (XSS) attacks. The issue is present in the carousel component, where the data-slide and data-slide-to attributes can be exploited through the href attribute of an \u003ca\u003e tag due to inadequate sanitization. This vulnerability could potentially enable attackers to execute arbitrary JavaScript within the victim's browser.",
+                "markdown": "**Vulnerability CVE-2024-6484**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|bootstrap||[CVE-2024-6484](https://avd.aquasec.com/nvd/cve-2024-6484)|\n\nA vulnerability has been identified in Bootstrap that exposes users to Cross-Site Scripting (XSS) attacks. The issue is present in the carousel component, where the data-slide and data-slide-to attributes can be exploited through the href attribute of an \u003ca\u003e tag due to inadequate sanitization. This vulnerability could potentially enable attackers to execute arbitrary JavaScript within the victim's browser."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "6.4",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
               "id": "CVE-2025-5889",
               "name": "LanguageSpecificPackageVulnerability",
               "shortDescription": {
@@ -33,6 +60,60 @@
                   "vulnerability",
                   "security",
                   "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-32873",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "django: Django StripTags Denial of Service"
+              },
+              "fullDescription": {
+                "text": "An issue was discovered in Django 4.2 before 4.2.21, 5.1 before 5.1.9, and 5.2 before 5.2.1. The django.utils.html.strip_tags() function is vulnerable to a potential denial-of-service (slow performance) when processing inputs containing large sequences of incomplete HTML tags. The template filter striptags is also vulnerable, because it is built on top of strip_tags()."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2025-32873",
+              "help": {
+                "text": "Vulnerability CVE-2025-32873\nSeverity: MEDIUM\nPackage: Django\nFixed Version: 4.2.21, 5.1.9, 5.2.1\nLink: [CVE-2025-32873](https://avd.aquasec.com/nvd/cve-2025-32873)\nAn issue was discovered in Django 4.2 before 4.2.21, 5.1 before 5.1.9, and 5.2 before 5.2.1. The django.utils.html.strip_tags() function is vulnerable to a potential denial-of-service (slow performance) when processing inputs containing large sequences of incomplete HTML tags. The template filter striptags is also vulnerable, because it is built on top of strip_tags().",
+                "markdown": "**Vulnerability CVE-2025-32873**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|Django|4.2.21, 5.1.9, 5.2.1|[CVE-2025-32873](https://avd.aquasec.com/nvd/cve-2025-32873)|\n\nAn issue was discovered in Django 4.2 before 4.2.21, 5.1 before 5.1.9, and 5.2 before 5.2.1. The django.utils.html.strip_tags() function is vulnerable to a potential denial-of-service (slow performance) when processing inputs containing large sequences of incomplete HTML tags. The template filter striptags is also vulnerable, because it is built on top of strip_tags()."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-48432",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "django: Django Path Injection Vulnerability"
+              },
+              "fullDescription": {
+                "text": "An issue was discovered in Django 5.2 before 5.2.3, 5.1 before 5.1.11, and 4.2 before 4.2.23. Internal HTTP response logging does not escape request.path, which allows remote attackers to potentially manipulate log output via crafted URLs. This may lead to log injection or forgery when logs are viewed in terminals or processed by external systems."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2025-48432",
+              "help": {
+                "text": "Vulnerability CVE-2025-48432\nSeverity: MEDIUM\nPackage: Django\nFixed Version: 5.2.2, 5.1.10, 4.2.22\nLink: [CVE-2025-48432](https://avd.aquasec.com/nvd/cve-2025-48432)\nAn issue was discovered in Django 5.2 before 5.2.3, 5.1 before 5.1.11, and 4.2 before 4.2.23. Internal HTTP response logging does not escape request.path, which allows remote attackers to potentially manipulate log output via crafted URLs. This may lead to log injection or forgery when logs are viewed in terminals or processed by external systems.",
+                "markdown": "**Vulnerability CVE-2025-48432**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|Django|5.2.2, 5.1.10, 4.2.22|[CVE-2025-48432](https://avd.aquasec.com/nvd/cve-2025-48432)|\n\nAn issue was discovered in Django 5.2 before 5.2.3, 5.1 before 5.1.11, and 4.2 before 4.2.23. Internal HTTP response logging does not escape request.path, which allows remote attackers to potentially manipulate log output via crafted URLs. This may lead to log injection or forgery when logs are viewed in terminals or processed by external systems."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "4.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
                 ]
               }
             },
@@ -116,6 +197,222 @@
                   "MEDIUM"
                 ]
               }
+            },
+            {
+              "id": "github-fine-grained-pat",
+              "name": "Secret",
+              "shortDescription": {
+                "text": "GitHub Fine-grained personal access tokens"
+              },
+              "fullDescription": {
+                "text": ")\\n\\t\\ntoken = '\",\"matching\":\"*********************************************************************************************\",\"after\":\"'\\nprojec"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://github.com/aquasecurity/trivy/blob/main/pkg/fanal/secret/builtin-rules.go",
+              "help": {
+                "text": "Secret GitHub Fine-grained personal access tokens\nSeverity: CRITICAL\nMatch: )\\n\\t\\ntoken = '\",\"matching\":\"*********************************************************************************************\",\"after\":\"'\\nprojec",
+                "markdown": "**Secret GitHub Fine-grained personal access tokens**\n| Severity | Match |\n| --- | --- |\n|CRITICAL|)\\n\\t\\ntoken = '\",\"matching\":\"*********************************************************************************************\",\"after\":\"'\\nprojec|"
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "9.5",
+                "tags": [
+                  "secret",
+                  "security",
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "github-pat",
+              "name": "Secret",
+              "shortDescription": {
+                "text": "GitHub Personal Access Token"
+              },
+              "fullDescription": {
+                "text": "pet\":{\"before\":\"\",\"matching\":\"****************************************\",\"after\":\"\\n\"},\"str"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://github.com/aquasecurity/trivy/blob/main/pkg/fanal/secret/builtin-rules.go",
+              "help": {
+                "text": "Secret GitHub Personal Access Token\nSeverity: CRITICAL\nMatch: pet\":{\"before\":\"\",\"matching\":\"****************************************\",\"after\":\"\\n\"},\"str",
+                "markdown": "**Secret GitHub Personal Access Token**\n| Severity | Match |\n| --- | --- |\n|CRITICAL|pet\":{\"before\":\"\",\"matching\":\"****************************************\",\"after\":\"\\n\"},\"str|"
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "9.5",
+                "tags": [
+                  "secret",
+                  "security",
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "gitlab-pat",
+              "name": "Secret",
+              "shortDescription": {
+                "text": "GitLab Personal Access Token"
+              },
+              "fullDescription": {
+                "text": "{\"before\":\"PAT: \",\"matching\":\"**************************\",\"after\":\"\\nCalenda"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://github.com/aquasecurity/trivy/blob/main/pkg/fanal/secret/builtin-rules.go",
+              "help": {
+                "text": "Secret GitLab Personal Access Token\nSeverity: CRITICAL\nMatch: {\"before\":\"PAT: \",\"matching\":\"**************************\",\"after\":\"\\nCalenda",
+                "markdown": "**Secret GitLab Personal Access Token**\n| Severity | Match |\n| --- | --- |\n|CRITICAL|{\"before\":\"PAT: \",\"matching\":\"**************************\",\"after\":\"\\nCalenda|"
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "9.5",
+                "tags": [
+                  "secret",
+                  "security",
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "jwt-token",
+              "name": "Secret",
+              "shortDescription": {
+                "text": "JWT token"
+              },
+              "fullDescription": {
+                "text": "pet\":{\"before\":\"\",\"matching\":\"***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\",\"after\":\"\"},\"struc"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://github.com/aquasecurity/trivy/blob/main/pkg/fanal/secret/builtin-rules.go",
+              "help": {
+                "text": "Secret JWT token\nSeverity: MEDIUM\nMatch: pet\":{\"before\":\"\",\"matching\":\"***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\",\"after\":\"\"},\"struc",
+                "markdown": "**Secret JWT token**\n| Severity | Match |\n| --- | --- |\n|MEDIUM|pet\":{\"before\":\"\",\"matching\":\"***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\",\"after\":\"\"},\"struc|"
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "secret",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "private-key",
+              "name": "Secret",
+              "shortDescription": {
+                "text": "Asymmetric Private Key"
+              },
+              "fullDescription": {
+                "text": "GIN PGP PRIVATE KEY BLOCK-----*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-----END PGP PRIVATE"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://github.com/aquasecurity/trivy/blob/main/pkg/fanal/secret/builtin-rules.go",
+              "help": {
+                "text": "Secret Asymmetric Private Key\nSeverity: HIGH\nMatch: GIN PGP PRIVATE KEY BLOCK-----*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-----END PGP PRIVATE",
+                "markdown": "**Secret Asymmetric Private Key**\n| Severity | Match |\n| --- | --- |\n|HIGH|GIN PGP PRIVATE KEY BLOCK-----*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-----END PGP PRIVATE|"
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "8.0",
+                "tags": [
+                  "secret",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "slack-web-hook",
+              "name": "Secret",
+              "shortDescription": {
+                "text": "Slack Webhook"
+              },
+              "fullDescription": {
+                "text": "pet\":{\"before\":\"\",\"matching\":\"*******************************************************************************\",\"after\":\"\\n\"},\"str"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://github.com/aquasecurity/trivy/blob/main/pkg/fanal/secret/builtin-rules.go",
+              "help": {
+                "text": "Secret Slack Webhook\nSeverity: MEDIUM\nMatch: pet\":{\"before\":\"\",\"matching\":\"*******************************************************************************\",\"after\":\"\\n\"},\"str",
+                "markdown": "**Secret Slack Webhook**\n| Severity | Match |\n| --- | --- |\n|MEDIUM|pet\":{\"before\":\"\",\"matching\":\"*******************************************************************************\",\"after\":\"\\n\"},\"str|"
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "secret",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "aws-access-key-id",
+              "name": "Secret",
+              "shortDescription": {
+                "text": "AWS Access Key ID"
+              },
+              "fullDescription": {
+                "text": "      \"********************\""
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://github.com/aquasecurity/trivy/blob/main/pkg/fanal/secret/builtin-rules.go",
+              "help": {
+                "text": "Secret AWS Access Key ID\nSeverity: CRITICAL\nMatch:       \"********************\"",
+                "markdown": "**Secret AWS Access Key ID**\n| Severity | Match |\n| --- | --- |\n|CRITICAL|      \"********************\"|"
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "9.5",
+                "tags": [
+                  "secret",
+                  "security",
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "stripe-secret-token",
+              "name": "Secret",
+              "shortDescription": {
+                "text": "Stripe Secret Key"
+              },
+              "fullDescription": {
+                "text": "      \"********************************\""
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://github.com/aquasecurity/trivy/blob/main/pkg/fanal/secret/builtin-rules.go",
+              "help": {
+                "text": "Secret Stripe Secret Key\nSeverity: CRITICAL\nMatch:       \"********************************\"",
+                "markdown": "**Secret Stripe Secret Key**\n| Severity | Match |\n| --- | --- |\n|CRITICAL|      \"********************************\"|"
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "9.5",
+                "tags": [
+                  "secret",
+                  "security",
+                  "CRITICAL"
+                ]
+              }
             }
           ],
           "version": "0.64.1"
@@ -123,8 +420,143 @@
       },
       "results": [
         {
-          "ruleId": "CVE-2025-5889",
+          "ruleId": "CVE-2024-6484",
           "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Package: bootstrap\nInstalled Version: 3.4.1\nVulnerability CVE-2024-6484\nSeverity: MEDIUM\nFixed Version: \nLink: [CVE-2024-6484](https://avd.aquasec.com/nvd/cve-2024-6484)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/components/yarn.lock",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 99,
+                  "startColumn": 1,
+                  "endLine": 102,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/components/yarn.lock: bootstrap@3.4.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-5889",
+          "ruleIndex": 1,
+          "level": "note",
+          "message": {
+            "text": "Package: brace-expansion\nInstalled Version: 1.1.11\nVulnerability CVE-2025-5889\nSeverity: LOW\nFixed Version: 2.0.2, 1.1.12, 3.0.1, 4.0.1\nLink: [CVE-2025-5889](https://avd.aquasec.com/nvd/cve-2025-5889)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/docs/package-lock.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 2684,
+                  "startColumn": 1,
+                  "endLine": 2693,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/docs/package-lock.json: brace-expansion@1.1.11"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-5889",
+          "ruleIndex": 1,
+          "level": "note",
+          "message": {
+            "text": "Package: brace-expansion\nInstalled Version: 2.0.1\nVulnerability CVE-2025-5889\nSeverity: LOW\nFixed Version: 2.0.2, 1.1.12, 3.0.1, 4.0.1\nLink: [CVE-2025-5889](https://avd.aquasec.com/nvd/cve-2025-5889)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/docs/package-lock.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 4097,
+                  "startColumn": 1,
+                  "endLine": 4105,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/docs/package-lock.json: brace-expansion@2.0.1"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-32873",
+          "ruleIndex": 2,
+          "level": "warning",
+          "message": {
+            "text": "Package: Django\nInstalled Version: 5.1.8\nVulnerability CVE-2025-32873\nSeverity: MEDIUM\nFixed Version: 4.2.21, 5.1.9, 5.2.1\nLink: [CVE-2025-32873](https://avd.aquasec.com/nvd/cve-2025-32873)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/requirements.txt",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 1,
+                  "endLine": 24,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/requirements.txt: Django@5.1.8"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-48432",
+          "ruleIndex": 3,
+          "level": "warning",
+          "message": {
+            "text": "Package: Django\nInstalled Version: 5.1.8\nVulnerability CVE-2025-48432\nSeverity: MEDIUM\nFixed Version: 5.2.2, 5.1.10, 4.2.22\nLink: [CVE-2025-48432](https://avd.aquasec.com/nvd/cve-2025-48432)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/requirements.txt",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 1,
+                  "endLine": 24,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/requirements.txt: Django@5.1.8"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-5889",
+          "ruleIndex": 1,
           "level": "note",
           "message": {
             "text": "Package: brace-expansion\nInstalled Version: 2.0.1\nVulnerability CVE-2025-5889\nSeverity: LOW\nFixed Version: 2.0.2, 1.1.12, 3.0.1, 4.0.1\nLink: [CVE-2025-5889](https://avd.aquasec.com/nvd/cve-2025-5889)"
@@ -151,7 +583,7 @@
         },
         {
           "ruleId": "CVE-2020-15256",
-          "ruleIndex": 1,
+          "ruleIndex": 4,
           "level": "error",
           "message": {
             "text": "Package: object-path\nInstalled Version: 0.6.0\nVulnerability CVE-2020-15256\nSeverity: HIGH\nFixed Version: 0.11.5\nLink: [CVE-2020-15256](https://avd.aquasec.com/nvd/cve-2020-15256)"
@@ -178,7 +610,7 @@
         },
         {
           "ruleId": "CVE-2021-3805",
-          "ruleIndex": 2,
+          "ruleIndex": 5,
           "level": "error",
           "message": {
             "text": "Package: object-path\nInstalled Version: 0.6.0\nVulnerability CVE-2021-3805\nSeverity: HIGH\nFixed Version: 0.11.8\nLink: [CVE-2021-3805](https://avd.aquasec.com/nvd/cve-2021-3805)"
@@ -205,7 +637,7 @@
         },
         {
           "ruleId": "CVE-2021-23434",
-          "ruleIndex": 3,
+          "ruleIndex": 6,
           "level": "warning",
           "message": {
             "text": "Package: object-path\nInstalled Version: 0.6.0\nVulnerability CVE-2021-23434\nSeverity: MEDIUM\nFixed Version: 0.11.6\nLink: [CVE-2021-23434](https://avd.aquasec.com/nvd/cve-2021-23434)"
@@ -226,6 +658,303 @@
               },
               "message": {
                 "text": "web/package-lock.json: object-path@0.6.0"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "github-fine-grained-pat",
+          "ruleIndex": 7,
+          "level": "error",
+          "message": {
+            "text": "Artifact: django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl\nType: \nSecret GitHub Fine-grained personal access tokens\nSeverity: CRITICAL\nMatch: )\\n\\t\\ntoken = '\",\"matching\":\"*********************************************************************************************\",\"after\":\"'\\nprojec"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 1,
+                  "endLine": 15,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "github-pat",
+          "ruleIndex": 8,
+          "level": "error",
+          "message": {
+            "text": "Artifact: django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl\nType: \nSecret GitHub Personal Access Token\nSeverity: CRITICAL\nMatch: pet\":{\"before\":\"\",\"matching\":\"****************************************\",\"after\":\"\\n\"},\"str"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 1,
+                  "endLine": 14,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "gitlab-pat",
+          "ruleIndex": 9,
+          "level": "error",
+          "message": {
+            "text": "Artifact: django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl\nType: \nSecret GitLab Personal Access Token\nSeverity: CRITICAL\nMatch: {\"before\":\"PAT: \",\"matching\":\"**************************\",\"after\":\"\\nCalenda"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 1,
+                  "endLine": 16,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "jwt-token",
+          "ruleIndex": 10,
+          "level": "warning",
+          "message": {
+            "text": "Artifact: django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl\nType: \nSecret JWT token\nSeverity: MEDIUM\nMatch: pet\":{\"before\":\"\",\"matching\":\"*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\",\"after\":\"\"},\"struc"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 1,
+                  "endLine": 21,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "jwt-token",
+          "ruleIndex": 10,
+          "level": "warning",
+          "message": {
+            "text": "Artifact: django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl\nType: \nSecret JWT token\nSeverity: MEDIUM\nMatch: pet\":{\"before\":\"\",\"matching\":\"***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************\",\"after\":\"\"},\"struc"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 1,
+                  "endLine": 22,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "private-key",
+          "ruleIndex": 11,
+          "level": "error",
+          "message": {
+            "text": "Artifact: django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl\nType: \nSecret Asymmetric Private Key\nSeverity: HIGH\nMatch: -----BEGIN EC PRIVATE KEY-----****************************************************************************************************************************************************************************-----END EC PRIVATE "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 1,
+                  "endLine": 23,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "private-key",
+          "ruleIndex": 11,
+          "level": "error",
+          "message": {
+            "text": "Artifact: django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl\nType: \nSecret Asymmetric Private Key\nSeverity: HIGH\nMatch: \":\"-----BEGIN PRIVATE KEY-----**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-----END PRIVATE KEY"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 1,
+                  "endLine": 24,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "private-key",
+          "ruleIndex": 11,
+          "level": "error",
+          "message": {
+            "text": "Artifact: django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl\nType: \nSecret Asymmetric Private Key\nSeverity: HIGH\nMatch: GIN PGP PRIVATE KEY BLOCK-----*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-----END PGP PRIVATE"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 1,
+                  "endLine": 25,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "slack-web-hook",
+          "ruleIndex": 12,
+          "level": "warning",
+          "message": {
+            "text": "Artifact: django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl\nType: \nSecret Slack Webhook\nSeverity: MEDIUM\nMatch: pet\":{\"before\":\"\",\"matching\":\"*******************************************************************************\",\"after\":\"\\n\"},\"str"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 1,
+                  "endLine": 26,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/unittests/scans/noseyparker/noseyparker_0_22_0.jsonl"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "aws-access-key-id",
+          "ruleIndex": 13,
+          "level": "error",
+          "message": {
+            "text": "Artifact: django-DefectDojo/unittests/scans/rusty_hog/gottingenhog_many_vulns.json\nType: \nSecret AWS Access Key ID\nSeverity: CRITICAL\nMatch:       \"********************\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/unittests/scans/rusty_hog/gottingenhog_many_vulns.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 1,
+                  "endLine": 31,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/unittests/scans/rusty_hog/gottingenhog_many_vulns.json"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "stripe-secret-token",
+          "ruleIndex": 14,
+          "level": "error",
+          "message": {
+            "text": "Artifact: django-DefectDojo/unittests/scans/rusty_hog/gottingenhog_many_vulns.json\nType: \nSecret Stripe Secret Key\nSeverity: CRITICAL\nMatch:       \"********************************\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "django-DefectDojo/unittests/scans/rusty_hog/gottingenhog_many_vulns.json",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 1,
+                  "endLine": 67,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "django-DefectDojo/unittests/scans/rusty_hog/gottingenhog_many_vulns.json"
               }
             }
           ]
