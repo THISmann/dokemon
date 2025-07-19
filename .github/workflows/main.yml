@@ -85,7 +85,7 @@ jobs:
       - name: Run Trivy
         run: |
           curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
-          trivy fs --format sarif --output trivy-results.sarif .
+          trivy fs --format sarif --output trivy-results.sarif
 
       - name: Check if Trivy results file exists and is not empty
         run: |
