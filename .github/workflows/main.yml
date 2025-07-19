@@ -93,12 +93,9 @@ jobs:
      # Étape 11 : Horusec - Plateforme d’analyse de sécurité multi-outils
       - name: Run Horusec
         run: |
-          sudo systemctl start docker
-          docker --version
-
-          curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | sh -s latest
-
-          horusec start -p . -o json -O horusec-results.json 
+          docker run -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd):/src horuszup/horusec-cli:latest horusec start -p /src -P $(pwd) -o json -O /src/horusec-results.json
+        env:
+          DOCKER_HOST: tcp://docker:2375
 
         #continue-on-error: true
  
