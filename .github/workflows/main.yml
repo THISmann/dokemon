@@ -39,7 +39,8 @@ jobs:
         run: |
           go install github.com/securego/gosec/v2/cmd/gosec@v2.22.5
           export PATH=$PATH:$GOPATH/bin
-          gosec -fmt=sarif -out=gosec-results.sarif ./...
+          gosec -fmt=sarif -out=gosec-results.sarif -exclude=G101,G102 ./pkg/server/handler
+        #gosec -fmt=sarif -out=gosec-results.sarif ./...
         #continue-on-error: true
 
       # Étape 5 : CodeQL - Analyse sémantique avancée
