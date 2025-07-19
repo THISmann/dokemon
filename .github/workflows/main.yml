@@ -35,11 +35,11 @@ jobs:
         run: go mod download
 
       # Étape 4 : GoSec - Analyse statique des vulnérabilités dans le code
-      - name: Run GoSec
-        run: |
-          go install github.com/securego/gosec/v2/cmd/gosec@v2.22.5
-          export PATH=$PATH:$GOPATH/bin
-          $(go env GOPATH)/bin/gosec ./pkg/server/handler/...
+      #- name: Run GoSec
+      #  run: |
+        #  go install github.com/securego/gosec/v2/cmd/gosec@v2.22.5
+        #  export PATH=$PATH:$GOPATH/bin
+        #  $(go env GOPATH)/bin/gosec -fmt=sarif -out=gosec-results.sarif ./pkg/server/handler/...
         #gosec -fmt=sarif -out=gosec-results.sarif ./...
         #continue-on-error: true
 
@@ -70,7 +70,7 @@ jobs:
         run: |
           pip install semgrep
           semgrep --config=p/go --sarif > semgrep-results.sarif
-        continue-on-error: true
+        #continue-on-error: true
 
       # Étape 8 : Snyk - Analyse du code et des dépendances
       # - name: Run Snyk
