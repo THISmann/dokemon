@@ -87,12 +87,18 @@ jobs:
           curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
           trivy fs --format sarif --output trivy-results.sarif .
 
-      - name: Check Trivy results file
+      - name: Check if Trivy results file exists and is not empty
         run: |
-          if [ ! -s trivy-results.sarif ]; then
-            echo "Trivy results file is empty or missing!"
+          if [ ! -f trivy-results.sarif ]; then
+            echo "❌ Trivy results file does not exist!"
             exit 1
+          elif [ ! -s trivy-results.sarif ]; then
+            echo "⚠️ Trivy results file exists but is empty!"
+            exit 1
+          else
+            echo "✅ Trivy results file exists and is not empty."
           fi
+
         #continue-on-error: true
 
      
