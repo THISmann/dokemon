@@ -119,6 +119,9 @@ func (h *Handler) DeleteCredentialById(c echo.Context) error {
 		return unprocessableEntity(c, errors.New("Credentials are in use and cannot be deleted"))
 	}
 
+	if id < 0 {
+		panic("invalid id: must be non-negative")
+	}
 	if err := h.credentialStore.DeleteById(uint(id)); err != nil {
 		panic(err)
 	}

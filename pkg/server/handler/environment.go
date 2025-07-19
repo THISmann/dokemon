@@ -92,6 +92,9 @@ func (h *Handler) DeleteEnvironmentById(c echo.Context) error {
 		return unprocessableEntity(c, errors.New("Environment is in use and cannot be deleted"))
 	}
 
+	if id < 0 {
+		panic("invalid id: must be non-negative")
+	}
 	if err := h.environmentStore.DeleteById(uint(id)); err != nil {
 		panic(err)
 	}

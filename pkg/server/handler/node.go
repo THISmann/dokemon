@@ -92,7 +92,10 @@ func (h *Handler) UpdateNodeContainerBaseUrl(c echo.Context) error {
 	if err := r.bind(c, m); err != nil {
 		return unprocessableEntity(c, err)
 	}
-
+	
+	if id < 0 {
+		panic("invalid id: must be non-negative")
+	}
 	if err := h.nodeStore.UpdateContainerBaseUrl(uint(id), &r.ContainerBaseUrl); err != nil {
 		panic(err)
 	}

@@ -178,7 +178,9 @@ func (h *Handler) DeleteUserById(c echo.Context) error {
 	if !exists {
 		return resourceNotFound(c, "User")
 	}
-
+	if id < 0 {
+		panic("invalid id: must be non-negative")
+	}
 	if err := h.userStore.DeleteById(uint(id)); err != nil {
 		panic(err)
 	}

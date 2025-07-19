@@ -97,7 +97,10 @@ func (h *Handler) DeleteNodeComposeProjectVariableById(c echo.Context) error {
 	if !exists {
 		return resourceNotFound(c, "NodeComposeProjectVariable")
 	}
-
+	
+	if id < 0 {
+		panic("invalid id: must be non-negative")
+	}
 	if err := h.nodeComposeProjectVariableStore.DeleteById(uint(nodeComposeProjectid), uint(id)); err != nil {
 		panic(err)
 	}
