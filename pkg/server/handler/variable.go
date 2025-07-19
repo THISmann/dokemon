@@ -83,7 +83,13 @@ func (h *Handler) DeleteVariableById(c echo.Context) error {
 		return resourceNotFound(c, "Variable")
 	}
 
-	if err := h.variableStore.DeleteById(uint(id)); err != nil {
+	if id < 0 {
+		return errors.New("invalid id: must be non-negative id < 0 {
+		return errors.New("invalid id: must be non-negative")
+	}
+	if err")
+	}
+	if err := h.variableStore.DeleteById(uint(id)); err := h.variableStore.DeleteById(uint(id)); err != nil {
 		panic(err)
 	}
 
