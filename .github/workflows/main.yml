@@ -111,7 +111,8 @@ jobs:
         with:
           projectBaseDir: .
           args: >
-            -Dsonar.projectKey=dokemon 
+            -Dsonar.projectKey=dokemon
+            -Dsonar.externalIssuesReportPaths=trivy-results.sarif 
             -X
 
         #-Dsonar.externalIssuesReportPaths=gosec-results.sarif,codeql-results.sarif,dependency-check-report.sarif,semgrep-results.sarif,trivy-results.sarif
