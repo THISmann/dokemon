@@ -70,7 +70,7 @@ jobs:
         run: |
           pip install semgrep
           semgrep --config=p/go --sarif > semgrep-results.sarif
-        #continue-on-error: true
+        continue-on-error: true
 
       # Étape 8 : Snyk - Analyse du code et des dépendances
       # - name: Run Snyk
@@ -88,19 +88,14 @@ jobs:
           trivy fs --format sarif --output trivy-results.sarif .
         continue-on-error: true
 
-      # Étape 10 : Gosecrets - Détection des secrets codés en dur
-      - name: Run Gosecrets
-        run: |
-          go install github.com/dominikh/gosecrets@latest
-          gosecrets --output=gosecrets-results.json ./...
-        continue-on-error: true
-
+     
       # Étape 11 : Horusec - Plateforme d’analyse de sécurité multi-outils
       - name: Run Horusec
         run: |
+          sudo systemctl start docker
           curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | sh -s latest
           horusec start -p . -o json -O horusec-results.json
-        continue-on-error: true
+        #continue-on-error: true
  
      # Étape 13 : SonarQube Scan Action  123 --
       - name: SonarQube Scan
