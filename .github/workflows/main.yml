@@ -28,7 +28,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.22'
+          go-version: '1.24.4'
 
       # Étape 3 : Installer les dépendances Go
       - name: Install Go dependencies
@@ -37,10 +37,10 @@ jobs:
       # Étape 4 : GoSec - Analyse statique des vulnérabilités dans le code
       - name: Run GoSec
         run: |
-          go install github.com/securego/gosec/v2/cmd/gosec@v2.22.0
+          go install github.com/securego/gosec/v2/cmd/gosec@v2.22.5
           export PATH=$PATH:$GOPATH/bin
           gosec -fmt=sarif -out=gosec-results.sarif ./...
-        continue-on-error: true
+        #continue-on-error: true
 
       # Étape 5 : CodeQL - Analyse sémantique avancée
       - name: Initialize CodeQL
