@@ -67,10 +67,10 @@ jobs:
 
       # Étape 7 : Semgrep - Analyse statique personnalisable
       - name: Run Semgrep
-        run: |
-          pip install semgrep
-          semgrep --config=p/go --sarif > semgrep-results.sarif
-        continue-on-error: true
+        run: semgrep ci --sarif > semgrep-results.sarif
+        env:
+          SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+        #continue-on-error: true
 
       # Étape 8 : Snyk - Analyse du code et des dépendances
       # - name: Run Snyk
