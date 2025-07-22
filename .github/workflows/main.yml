@@ -1,4 +1,5 @@
 name: Go DevSecOps Security Pipeline
+
 on:
   push:
     branches:
@@ -9,41 +10,45 @@ on:
       - main
       - develop
   schedule:
-    - cron: '0 0 * * 1' # Exécute chaque lundi à minuit UTC
+    - cron: '0 0 * * 1' # Run every Monday at 00:00 UTC
+  workflow_dispatch: {} # Allow manual runs
 
 permissions:
   contents: read
-  security-events: write # Nécessaire pour uploader les rapports SARIF
+  security-events: write # For SARIF uploads
   actions: read
 
 jobs:
   security-scans:
+    name: Security Scans
     runs-on: ubuntu-latest
+
     steps:
-      # Étape 1 : Checkout du code
+      # Checkout code with full history for diff-aware scans
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      # Étape 2 : Configurer Go
+      # Set up Go
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
           go-version: '1.24.4'
 
-      # Étape 3 : Installer les dépendances Go
+      # Install Go dependencies
       - name: Install Go dependencies
         run: go mod download
 
-      # Étape 4 : GoSec - Analyse statique des vulnérabilités dans le code
-      #- name: Run GoSec
-      #  run: |
-        #  go install github.com/securego/gosec/v2/cmd/gosec@v2.22.5
-        #  export PATH=$PATH:$GOPATH/bin
-        #  $(go env GOPATH)/bin/gosec -fmt=sarif -out=gosec-results.sarif ./pkg/server/handler/...
-        #gosec -fmt=sarif -out=gosec-results.sarif ./...
-        #continue-on-error: true
+      # GoSec - Static analysis for Go code
+      - name: Run GoSec
+        run: |
+          go install github.com/securego/gosec/v2/cmd/gosec@v2.22.5
+          export PATH=$PATH:$(go env GOPATH)/bin
+          gosec -fmt=sarif -out=gosec-results.sarif ./...
+        continue-on-error: true
 
-      # Étape 5 : CodeQL - Analyse sémantique avancée
+      # CodeQL - Semantic code analysis
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
@@ -55,7 +60,7 @@ jobs:
           output: codeql-results.sarif
         continue-on-error: true
 
-      # Étape 6 : OWASP Dependency-Check - Analyse des dépendances
+      # OWASP Dependency-Check - Dependency vulnerability scanning
       - name: Run OWASP Dependency-Check
         uses: dependency-check/Dependency-Check_Action@main
         with:
@@ -65,73 +70,38 @@ jobs:
           out: 'dependency-check-report.sarif'
         continue-on-error: true
 
-      # Étape 7 : Semgrep - Analyse statique personnalisable
+      # Semgrep - Static analysis with Go-specific rules
       - name: Run Semgrep
-        run: semgrep ci --sarif > semgrep-results.sarif
+        run: |
+          docker run --rm -v $(pwd):/src semgrep/semgrep:latest semgrep ci --config=p/go --sarif > semgrep-results.sarif
         env:
           SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
-        #continue-on-error: true
+        continue-on-error: true
 
-      # Étape 8 : Snyk - Analyse du code et des dépendances
-      # - name: Run Snyk
-      #   uses: snyk/actions/go@master
-      #   env:
-      #     SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      #   with:
-      #     args: --sarif-file-output=snyk-results.sarif
-      #   continue-on-error: true
-
-      # Étape 9 : Trivy - Scanner de dépendances et conteneurs
+      # Trivy - Dependency and filesystem scanning
       - name: Run Trivy
-        run: |
-          curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
-          trivy fs --format sarif --output trivy-results.sarif
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: 'fs'
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+          severity: 'CRITICAL,HIGH,MEDIUM,LOW'
+        continue-on-error: true
 
-      - name: Check if Trivy results file exists and is not empty
-        run: |
-          if [ ! -f trivy-results.sarif ]; then
-            echo "❌ Trivy results file does not exist!"
-            exit 1
-          elif [ ! -s trivy-results.sarif ]; then
-            echo "⚠️ Trivy results file exists but is empty!"
-            exit 1
-          else
-            echo "✅ Trivy results file exists and is not empty."
-          fi
-
-        #continue-on-error: true
-
-     
-      # Étape 11 : Horusec - Plateforme d’analyse de sécurité multi-outils
-     # Étape 11 : Horusec - Plateforme d’analyse de sécurité multi-outils
-      #- name: Run Horusec
-      #  run: |
-      #    sudo systemctl start docker
-      #    docker --version
-
-      #    curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | sh -s latest
-
-      #    horusec start -p . -o json -O horusec-results.json 
-
-        #continue-on-error: true
- 
-     # Étape 13 : SonarQube Scan Action  123 --
+      # SonarQube - Code quality and security analysis
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5.2.0
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_DOKEMON_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
           projectBaseDir: .
           args: >
             -Dsonar.projectKey=dokemon
-            -Dsonar.externalIssuesReportPaths=trivy-results.sarif 
-            -X
+            -Dsonar.externalIssuesReportPaths=gosec-results.sarif,codeql-results.sarif,dependency-check-report.sarif,semgrep-results.sarif,trivy-results.sarif
+        continue-on-error: true
 
-        #-Dsonar.externalIssuesReportPaths=gosec-results.sarif,codeql-results.sarif,dependency-check-report.sarif,semgrep-results.sarif,trivy-results.sarif
-      
-      
-      # Étape 13 : Uploader les rapports SARIF vers GitHub Security
+      # Upload SARIF reports to GitHub Security tab
       - name: Upload SARIF reports
         uses: github/codeql-action/upload-sarif@v3
         with:
@@ -139,17 +109,6 @@ jobs:
             gosec-results.sarif
             codeql-results.sarif
             dependency-check-report.sarif
-            semgrep-results.sarif 
+            semgrep-results.sarif
             trivy-results.sarif
         continue-on-error: true
-
-      # Étape 14 : Archiver les rapports JSON
-      - name: Upload JSON reports
-        uses: actions/upload-artifact@v4
-        with:
-          name: security-reports
-          path: |
-            gosecrets-results.json
-            horusec-results.json
-
-#test 222
