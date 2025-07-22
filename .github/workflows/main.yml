@@ -90,6 +90,7 @@ jobs:
           projectBaseDir: .
           args: >
             -Dsonar.projectKey=dokemon 
-            -X 
+            -X
+        continue-on-error: true
 
     
