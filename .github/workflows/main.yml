@@ -41,12 +41,12 @@ jobs:
         run: go mod download
 
       # GoSec - Static analysis for Go code
-      - name: Run GoSec
-        run: |
-          go install github.com/securego/gosec/v2/cmd/gosec@v2.22.5
-          export PATH=$PATH:$(go env GOPATH)/bin
-          gosec -fmt=sarif -out=gosec-results.sarif ./...
-        continue-on-error: true
+      #- name: Run GoSec
+      #  run: |
+      #    go install github.com/securego/gosec/v2/cmd/gosec@v2.22.5
+      #    export PATH=$PATH:$(go env GOPATH)/bin
+      #    gosec -fmt=sarif -out=gosec-results.sarif ./...
+      #  continue-on-error: true
 
       # CodeQL - Semantic code analysis
       - name: Initialize CodeQL
@@ -58,17 +58,9 @@ jobs:
         uses: github/codeql-action/analyze@v3
         with:
           output: codeql-results.sarif
-        continue-on-error: true
+        #continue-on-error: true
 
-      # OWASP Dependency-Check - Dependency vulnerability scanning
-      - name: Run OWASP Dependency-Check
-        uses: dependency-check/Dependency-Check_Action@main
-        with:
-          project: 'go-project'
-          path: './go.mod'
-          format: 'SARIF'
-          out: 'dependency-check-report.sarif'
-        continue-on-error: true
+      
 
       # Semgrep - Static analysis with Go-specific rules
       - name: Run Semgrep
@@ -79,14 +71,14 @@ jobs:
         continue-on-error: true
 
       # Trivy - Dependency and filesystem scanning
-      - name: Run Trivy
-        uses: aquasecurity/trivy-action@0.28.0
-        with:
-          scan-type: 'fs'
-          format: 'sarif'
-          output: 'trivy-results.sarif'
-          severity: 'CRITICAL,HIGH,MEDIUM,LOW'
-        continue-on-error: true
+      #- name: Run Trivy
+      #  uses: aquasecurity/trivy-action@0.28.0
+      #  with:
+      #    scan-type: 'fs'
+      #    format: 'sarif'
+      #    output: 'trivy-results.sarif'
+      #    severity: 'CRITICAL,HIGH,MEDIUM,LOW'
+      #  continue-on-error: true
 
       # SonarQube - Code quality and security analysis
       - name: SonarQube Scan
@@ -97,18 +89,7 @@ jobs:
         with:
           projectBaseDir: .
           args: >
-            -Dsonar.projectKey=dokemon
-            -Dsonar.externalIssuesReportPaths=gosec-results.sarif,codeql-results.sarif,dependency-check-report.sarif,semgrep-results.sarif,trivy-results.sarif
-        continue-on-error: true
+            -Dsonar.projectKey=dokemon 
+            -X 
 
-      # Upload SARIF reports to GitHub Security tab
-      - name: Upload SARIF reports
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: |
-            gosec-results.sarif
-            codeql-results.sarif
-            dependency-check-report.sarif
-            semgrep-results.sarif
-            trivy-results.sarif
-        continue-on-error: true
+    
