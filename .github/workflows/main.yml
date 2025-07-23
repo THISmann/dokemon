@@ -83,14 +83,14 @@ jobs:
       # SonarQube - Code quality and security analysis
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5.2.0
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
           projectBaseDir: .
           args: >
-            -Dsonar.projectKey=dokemon 
+            -Dsonar.projectKey=dokemon  
             -X
-        continue-on-error: true
+        
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_HEALTH_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 
     
