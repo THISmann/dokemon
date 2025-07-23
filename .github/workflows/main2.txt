@@ -100,19 +100,7 @@ jobs:
           horusec start -p . -o json -O horusec-results.json
         continue-on-error: true
 
-      # Étape 12 : SonarQube - Analyse statique avec plugin Go
-      - name: Run SonarQube
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          npm install -g sonar-scanner
-          sonar-scanner \
-            -Dsonar.projectKey=go-project \
-            -Dsonar.organization=${{ secrets.SONAR_ORG }} \
-            -Dsonar.sources=. \
-            -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-        continue-on-error: true
+       
 
       # Étape 13 : Uploader les rapports SARIF vers GitHub Security
       - name: Upload SARIF reports
