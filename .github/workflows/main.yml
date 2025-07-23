@@ -2,20 +2,16 @@ name: Go DevSecOps Security Pipeline
 
 on:
   push:
-    branches:
-      - main
-      - develop
+    branches: [main, develop]
   pull_request:
-    branches:
-      - main
-      - develop
+    branches: [main, develop]
   schedule:
-    - cron: '0 0 * * 1' # Run every Monday at 00:00 UTC
-  workflow_dispatch: {} # Allow manual runs
+    - cron: '0 0 * * 1' # Every Monday at 00:00 UTC
+  workflow_dispatch: {}
 
 permissions:
   contents: read
-  security-events: write # For SARIF uploads
+  security-events: write
   actions: read
 
 jobs:
@@ -24,73 +20,60 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout code with full history for diff-aware scans
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # Set up Go
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
           go-version: '1.24.4'
 
-      # Install Go dependencies
       - name: Install Go dependencies
         run: go mod download
 
-      # GoSec - Static analysis for Go code
-      #- name: Run GoSec
-      #  run: |
-      #    go install github.com/securego/gosec/v2/cmd/gosec@v2.22.5
-      #    export PATH=$PATH:$(go env GOPATH)/bin
-      #    gosec -fmt=sarif -out=gosec-results.sarif ./...
-      #  continue-on-error: true
+      # Uncomment the following block to enable GoSec
+      # - name: Run GoSec
+      #   run: |
+      #     go install github.com/securego/gosec/v2/cmd/gosec@v2.22.5
+      #     export PATH=$PATH:$(go env GOPATH)/bin
+      #     gosec -fmt=sarif -out=gosec-results.sarif ./...
+      #   continue-on-error: true
 
-      # CodeQL - Semantic code analysis
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
           languages: go
           queries: security-and-quality
+
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
         with:
           output: codeql-results.sarif
-        #continue-on-error: true
 
-      
-
-      # Semgrep - Static analysis with Go-specific rules
-      - name: Run Semgrep
-        run: |
-          docker run --rm -v $(pwd):/src semgrep/semgrep:latest semgrep ci --config=p/go --sarif > semgrep-results.sarif
-        env:
-          SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
-        continue-on-error: true
-
-      # Trivy - Dependency and filesystem scanning
-      #- name: Run Trivy
-      #  uses: aquasecurity/trivy-action@0.28.0
-      #  with:
-      #    scan-type: 'fs'
-      #    format: 'sarif'
-      #    output: 'trivy-results.sarif'
-      #    severity: 'CRITICAL,HIGH,MEDIUM,LOW'
-      #  continue-on-error: true
-
-      # SonarQube - Code quality and security analysis
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5.2.0
         with:
           projectBaseDir: .
           args: >
-            -Dsonar.projectKey=dokemon  
+            -Dsonar.projectKey=dokemon
             -X
-        
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_DOKEMON_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 
-    
+  semgrep:
+    name: Semgrep CI
+    runs-on: ubuntu-latest
+    if: (github.actor != 'dependabot[bot]')
+    container:
+      image: semgrep/semgrep
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Semgrep
+        run: semgrep ci
+        env:
+          SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
